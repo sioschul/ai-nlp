@@ -1,6 +1,7 @@
 import spacy
 import nltk
 from collections import Counter
+import pprint
 
 nlp = spacy.load('xx_ent_wiki_sm')
 with open("Harry_Potter_and_the_Sorcerer.txt") as f:
@@ -12,7 +13,6 @@ for s in sentences:
     for ent in doc.ents:
         tokens.append((ent.text, ent.label_))
 c = Counter(tokens)
-print(c.most_common(24))
-#with open("entites_HP1_wikimodel.txt", "a") as f:
-    #f.write(str(c))
+#print(c.most_common(24))
+pprint(c)
 
