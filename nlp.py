@@ -45,3 +45,6 @@ for s in sentences:
         tokens.append((ent.text, ent.label_))
 c = Counter(tokens)
 print(c.most_common(24))
+with open("entites_HP1_wikimodel.txt", "a") as f:
+    f.write(str(c))
+
