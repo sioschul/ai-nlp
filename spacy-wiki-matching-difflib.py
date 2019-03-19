@@ -3,10 +3,14 @@ import itertools
 import spacy
 # import string
 import nltk
-from collections import Counter
+from collections import Counter, OrderedDict
 import pprint as pp
 import re
 import gensim
+from difflib import get_close_matches, SequenceMatcher
+from fuzzywuzzy import fuzz
+from fuzzywuzzy import process
+
 
 # load model
 nlp = spacy.load('xx_ent_wiki_sm')
@@ -51,24 +55,15 @@ for k in most_common.keys():
 singles.sort()
 pp.pprint(singles)
 
-matched= []
-# matching with substring
+matched = []
 for ent in singles:
-    together = []
-    for k in singles:
-        if ent in k:
-            together.append(k)
-        appended = False
-        for sublist in matched:
-            for item in together:
-                if item in sublist:
-                    for i in together:
-                        if i not in sublist:
-                            sublist.append(i)
-                            appended = True
-    if not appended:
-        matched.append(together)
-
+    matches = []
+    for item in singles:
+        if fuzz.ratio(ent, item) > 60:
+       #if SequenceMatcher(None, ent, item).ratio() > 0.64:
+           matches.append(item)
+    #matches = get_close_matches(ent, singles, 8, 0.65)
+    matched.append(matches)
 for sublist in matched:
     sublist.sort()
 matched.sort()
@@ -86,10 +81,9 @@ for i in sentences:
 
     data.append(temp)
 
-model1 = gensim.models.Word2Vec(data, min_count=1,
+model1 = gensim.models.Word2Vec(data, min_count=3,
                                 size=100, window=5, sg=1)
 print("Harry + Voldemort ",
       model1.wv.similarity('Voldemort', 'Harry'))
 print("Voldemort + You-know-who",
       model1.wv.similarity('Voldemort', 'You-Know-Who'))
-

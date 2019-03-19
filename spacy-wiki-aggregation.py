@@ -1,12 +1,11 @@
-import itertools
-
 import spacy
 # import string
 import nltk
-from collections import Counter
+from collections import Counter, OrderedDict
 import pprint as pp
 import re
 import gensim
+from difflib import get_close_matches, SequenceMatcher
 
 # load model
 nlp = spacy.load('xx_ent_wiki_sm')
@@ -43,53 +42,25 @@ c = Counter(tokens)
 # remove unnecessary entries with <6 occurrences
 most_common = {k: c[k] for k in c if c[k] > 6}
 common_sentences = {k: sentences_by_ents[k] for k in sentences_by_ents if len(sentences_by_ents[k]) > 6}
-# remove doubles from most_common
-singles = []
-for k in most_common.keys():
-    if k[0] not in singles:
-        singles.append(k[0])
-singles.sort()
-pp.pprint(singles)
 
-matched= []
-# matching with substring
-for ent in singles:
-    together = []
-    for k in singles:
-        if ent in k:
-            together.append(k)
-        appended = False
-        for sublist in matched:
-            for item in together:
-                if item in sublist:
-                    for i in together:
-                        if i not in sublist:
-                            sublist.append(i)
-                            appended = True
-    if not appended:
-        matched.append(together)
-
-for sublist in matched:
-    sublist.sort()
-matched.sort()
-matched = list(matched for matched,_ in itertools.groupby(matched))
-pp.pprint(matched)
-
-# gensim word embedding model
-data = []
-for i in sentences:
-    temp = []
-
-    # tokenize the sentence into words
-    for j in nltk.word_tokenize(i):
-        temp.append(j)
-
-    data.append(temp)
-
-model1 = gensim.models.Word2Vec(data, min_count=1,
-                                size=100, window=5, sg=1)
-print("Harry + Voldemort ",
-      model1.wv.similarity('Voldemort', 'Harry'))
-print("Voldemort + You-know-who",
-      model1.wv.similarity('Voldemort', 'You-Know-Who'))
-
+# sort same named entities with different tags together
+# make all entries have the most common tag, which is not MISC
+done = []
+aggregated = {}
+for k, v in most_common.items():
+    if k[0] not in done:
+        new_dict = {k: v}
+        for k1, v1 in most_common.items():
+            if k1[0] == k[0] and k1 != k:
+                new_dict[k1] = v1
+                sorted_dict = OrderedDict(sorted(new_dict.items(), key=lambda kv: kv[1], reverse=True))
+                keys = list(sorted_dict.keys())
+                items = list(sorted_dict.items())
+                tag = keys[0][1]
+                if len(items) > 1:
+                    if keys[0][1] == "MISC":
+                        tag = keys[1][1]
+                        changed = {k[0]: tag}
+                        aggregated.update(changed.items())
+    done.append(k[0])
+pp.pprint(aggregated)

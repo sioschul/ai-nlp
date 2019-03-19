@@ -21,7 +21,8 @@ for token in sent:
 #c = Counter(nnp)
 #print(c.most_common(24))
 #print(sent)
-tree = nltk.ne_chunk(nnp)
-print(tree)
+#tree = nltk.ne_chunk(nnp)
+#print(tree)
 #c = Counter(tree)
 #print(c.most_common(24))
+
