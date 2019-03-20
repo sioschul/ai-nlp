@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0e026d0-a6a5-42f4-9e9b-136eed46ee81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/spacy-wiki-aggregation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlp-nltk-1.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlp-nltk-1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spacy-wiki-aggregation-matching.py" beforeDir="false" afterPath="$PROJECT_DIR$/spacy-wiki-aggregation-matching.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacy-wiki-matching-difflib.py" beforeDir="false" afterPath="$PROJECT_DIR$/spacy-wiki-matching-difflib.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,10 +14,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spacy-wiki-matching-difflib.py">
+        <entry file="file://$PROJECT_DIR$/spacy-wiki-aggregation-matching.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="61" column="37" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
+            <state relative-caret-position="199">
+              <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -43,6 +41,9 @@
       <find>privet</find>
       <find>hermio</find>
       <find>ron weasley</find>
+      <find>print</find>
+      <find>this man's</find>
+      <find>Dumbledore slipped</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -58,8 +59,8 @@
         <option value="$PROJECT_DIR$/spacy-propn-aggregation-matching.py" />
         <option value="$PROJECT_DIR$/nlp-nltk-1.py" />
         <option value="$PROJECT_DIR$/spacy-wiki-aggregation.py" />
-        <option value="$PROJECT_DIR$/spacy-wiki-aggregation-matching.py" />
         <option value="$PROJECT_DIR$/spacy-wiki-matching-difflib.py" />
+        <option value="$PROJECT_DIR$/spacy-wiki-aggregation-matching.py" />
       </list>
     </option>
   </component>
@@ -108,7 +109,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.spacy-wiki-matching-difflib">
+  <component name="RunManager" selected="Python.spacy-wiki-aggregation-matching">
     <configuration name="nlp-nltk-1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ai-nlp" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -216,8 +217,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.spacy-wiki-matching-difflib" />
         <item itemvalue="Python.spacy-wiki-aggregation-matching" />
+        <item itemvalue="Python.spacy-wiki-matching-difflib" />
         <item itemvalue="Python.nlp-nltk-1" />
         <item itemvalue="Python.spacy-propn-aggregation-matching" />
         <item itemvalue="Python.nlp-spacy-proprn" />
@@ -256,7 +257,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
@@ -407,20 +408,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spacy-wiki-aggregation-matching.py">
+    <entry file="file://$PROJECT_DIR$/spacy-wiki-matching-difflib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="77" selection-start-line="77" selection-end-line="93" selection-end-column="56" />
+        <state relative-caret-position="143">
+          <caret line="61" column="37" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spacy-wiki-matching-difflib.py">
+    <entry file="file://$PROJECT_DIR$/spacy-wiki-aggregation-matching.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="61" column="37" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
+        <state relative-caret-position="199">
+          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>

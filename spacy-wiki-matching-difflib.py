@@ -59,7 +59,7 @@ matched = []
 for ent in singles:
     matches = []
     for item in singles:
-        if fuzz.ratio(ent, item) > 60:
+        if fuzz.ratio(ent, item) > 62:
        #if SequenceMatcher(None, ent, item).ratio() > 0.64:
            matches.append(item)
     #matches = get_close_matches(ent, singles, 8, 0.65)

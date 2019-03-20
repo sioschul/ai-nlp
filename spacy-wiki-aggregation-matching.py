@@ -49,31 +49,79 @@ for k in most_common.keys():
     if k[0] not in singles:
         singles.append(k[0])
 singles.sort()
-pp.pprint(singles)
+#pp.pprint(singles)
 
+# match entities which are substrings of each other
 matched= []
-# matching with substring
 for ent in singles:
-    together = []
-    for k in singles:
-        if ent in k:
-            together.append(k)
-        appended = False
-        for sublist in matched:
-            for item in together:
-                if item in sublist:
-                    for i in together:
-                        if i not in sublist:
-                            sublist.append(i)
-                            appended = True
+    belong_together = []
+    for i in singles:
+        if i in ent or ent in i:
+            belong_together.append(i)
+    appended = False
+    for sublist in matched:
+        for x in belong_together:
+            if x in sublist:
+                sublist.extend(belong_together)
+                appended = True
     if not appended:
-        matched.append(together)
+        matched.append(belong_together)
 
-for sublist in matched:
-    sublist.sort()
+# remove duplicates from matches
+for idx,sublist in enumerate(matched):
+    temp = list(dict.fromkeys(sublist))
+    temp.sort()
+    matched[idx]=temp
 matched.sort()
 matched = list(matched for matched,_ in itertools.groupby(matched))
-pp.pprint(matched)
+#pp.pprint(matched)
+
+#put sentences togther passed on matched entities
+sentences_matched ={}
+for sublist in matched:
+    keys = ()
+    for item in sublist:
+        for item2 in sublist:
+            value = common_sentences[item].extend(common_sentences[item2])
+            if item2 not in keys:
+                keys = keys +(item2,)
+    sentences_matched[keys] = common_sentences[item]
+
+#remove duplicates
+for key, value in sentences_matched.items():
+    new_sentences = list(dict.fromkeys(value))
+    new_sentences.sort()
+    sentences_matched.update({key : new_sentences})
+
+sentences_clear = {}
+for key,value in sentences_matched.items():
+    if value not in sentences_clear.values():
+        sentences_clear[key] = value
+
+pp.pprint(sentences_clear)
+#print(sentences_clear["Dumbledore"])
+# matching with substring
+#for ent in singles:
+    #together = []
+    #for k in singles:
+        #if ent in k:
+            #together.append(k)
+        #appended = False
+        #for sublist in matched:
+            #for item in together:
+                #if item in sublist:
+                    #for i in together:
+                        #if i not in sublist:
+                            #sublist.append(i)
+                            #appended = True
+    #if not appended:
+        #matched.append(together)
+
+#for sublist in matched:
+    #sublist.sort()
+#matched.sort()
+#matched = list(matched for matched,_ in itertools.groupby(matched))
+
 
 # gensim word embedding model
 data = []
