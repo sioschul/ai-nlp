@@ -7,7 +7,6 @@ from collections import Counter
 import pprint as pp
 import re
 import gensim
-
 # load model
 nlp = spacy.load('xx_ent_wiki_sm')
 
@@ -21,24 +20,40 @@ spacy_stopwords.add('yeah')
 # read book
 with open("Harry_Potter_and_the_Sorcerer.txt") as f:
     book = f.read()
+
 # split book into sentences
 sentences = nltk.tokenize.sent_tokenize(book)
 tokens = []
 sentences_by_ents = {}
-
+#ents =[]
 # spacy entity model
-for s in sentences:
+for i, s in enumerate(sentences):
     s = re.sub('\s+', ' ', s)
     s = s.strip()
     doc = nlp(s)
     for ent in doc.ents:
+        name = ent.text
+        if len(ent.text.split()) > 1:
+            name = ent.text.replace(" ", "_")
+            sentences[i] = sentences[i].replace(ent.text, name)
         # remove whitespaces from ents and remove stopwords from ents
-        if ent.text.lower() not in spacy_stopwords and not ent.text.startswith('\'') and not ent.text.startswith('\"'):
+        if name.lower() not in spacy_stopwords and not name.startswith('\'') and not name.startswith('\"'):
             # keep all sentences from the same entity together
             # assuming entities with the same name are always the same type/person in the same book
-            sentences_by_ents.setdefault(ent.text, []).append(s)
+            sentences_by_ents.setdefault(name, []).append(sentences[i].strip())
             # keep track of entities with their tag
-            tokens.append((ent.text, ent.label_))
+            tokens.append((name, ent.label_))
+            #ents.append(ent)
+
+'''for ent in ents:
+    if ent.text =='Harry':
+        ent1 = ent
+        break
+for ent in ents:
+    if ent.text == 'Harry Potter':
+        ent2 = ent
+        break
+print(ent1.similarity(ent2)) ca. 0.6'''
 c = Counter(tokens)
 # remove unnecessary entries with <6 occurrences
 most_common = {k: c[k] for k in c if c[k] > 6}
@@ -68,7 +83,7 @@ for ent in singles:
         matched.append(belong_together)
 
 # remove duplicates from matches
-for idx,sublist in enumerate(matched):
+for idx ,sublist in enumerate(matched):
     temp = list(dict.fromkeys(sublist))
     temp.sort()
     matched[idx]=temp
@@ -98,7 +113,8 @@ for key,value in sentences_matched.items():
     if value not in sentences_clear.values():
         sentences_clear[key] = value
 
-pp.pprint(sentences_clear)
+#pp.pprint(sentences_clear)
+
 #print(sentences_clear["Dumbledore"])
 # matching with substring
 #for ent in singles:
@@ -134,10 +150,15 @@ for i in sentences:
 
     data.append(temp)
 
-model1 = gensim.models.Word2Vec(data, min_count=1,
+model1 = gensim.models.Word2Vec(data, min_count=2, hs=0, iter=8,
                                 size=100, window=5, sg=1)
-print("Harry + Voldemort ",
-      model1.wv.similarity('Voldemort', 'Harry'))
-print("Voldemort + You-know-who",
-      model1.wv.similarity('Voldemort', 'You-Know-Who'))
+print("Harry")
+print("Harry_Potter",model1.wv.similarity('Harry', 'Harry_Potter'))
+for x in model1.wv.most_similar('Harry'):
+    if x[0] in singles:
+        print(x)
+print("Harry_Potter",
+      model1.wv.most_similar('Harry_Potter'))
+print("Voldemort",
+      model1.wv.most_similar('Voldemort'))
 
