@@ -1,9 +1,10 @@
 import itertools
+from collections import Counter
 
 import spacy
 # import string
 import nltk
-from collections import Counter
+
 import pprint as pp
 import re
 import gensim
