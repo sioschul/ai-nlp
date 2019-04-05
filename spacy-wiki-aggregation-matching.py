@@ -74,13 +74,13 @@ for ent in singles:
     for i in singles:
         if i in ent or ent in i:
             belong_together.append(i)
-    appended = False
+    extended = False
     for sublist in matched:
         for x in belong_together:
             if x in sublist:
                 sublist.extend(belong_together)
-                appended = True
-    if not appended:
+                extended = True
+    if not extended:
         matched.append(belong_together)
 
 # remove duplicates from matches

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0e026d0-a6a5-42f4-9e9b-136eed46ee81" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spacy-wiki-aggregation-matching.py" beforeDir="false" afterPath="$PROJECT_DIR$/spacy-wiki-aggregation-matching.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -12,7 +11,44 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/single_word_matching.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="84" column="12" selection-start-line="84" selection-start-column="12" selection-end-line="84" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#16#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spacy-wiki-aggregation-matching.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="301">
+              <caret line="83" column="39" lean-forward="true" selection-start-line="76" selection-start-column="2" selection-end-line="83" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#16#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ambigous_words_frequency.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="62" column="18" lean-forward="true" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#16#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -32,8 +68,9 @@
       <find>this man's</find>
       <find>Dumbledore slipped</find>
       <find>profess</find>
-      <find>albus</find>
       <find>defa</find>
+      <find>draco</find>
+      <find>albus</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -50,9 +87,10 @@
         <option value="$PROJECT_DIR$/nlp-nltk-1.py" />
         <option value="$PROJECT_DIR$/spacy-wiki-aggregation.py" />
         <option value="$PROJECT_DIR$/spacy-wiki-matching-difflib.py" />
-        <option value="$PROJECT_DIR$/spacy-wiki-aggregation-matching.py" />
         <option value="$PROJECT_DIR$/ambigous_words_frequency.py" />
         <option value="$PROJECT_DIR$/ambiguity_single_multiwords.txt" />
+        <option value="$PROJECT_DIR$/spacy-wiki-aggregation-matching.py" />
+        <option value="$PROJECT_DIR$/single_word_matching.py" />
       </list>
     </option>
   </component>
@@ -88,6 +126,9 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Acer\Documents\GitHub\ai-nlp\old" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Acer\Documents\GitHub\ai-nlp" />
     </key>
@@ -104,7 +145,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ambigous_words_frequency">
+  <component name="RunManager" selected="Python.single_word_matching">
     <configuration name="ambigous_words_frequency" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ai-nlp" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -147,7 +188,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="spacy-propn-aggregation-matching" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="single_word_matching" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ai-nlp" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -159,7 +200,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spacy-propn-aggregation-matching.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/single_word_matching.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -212,11 +253,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.single_word_matching" />
         <item itemvalue="Python.ambigous_words_frequency" />
         <item itemvalue="Python.spacy-wiki-aggregation-matching" />
         <item itemvalue="Python.spacy-wiki-matching-difflib" />
         <item itemvalue="Python.nlp-nltk-1" />
-        <item itemvalue="Python.spacy-propn-aggregation-matching" />
       </list>
     </recent_temporary>
   </component>
@@ -250,7 +291,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -313,7 +354,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nlp-spacy-2.py">
+    <entry file="file://$PROJECT_DIR$/old/nlp-spacy-2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
@@ -322,7 +363,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nlp-spacy-3.py">
+    <entry file="file://$PROJECT_DIR$/old/nlp-spacy-3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
@@ -331,7 +372,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nlp-spacy-wiki.py">
+    <entry file="file://$PROJECT_DIR$/old/nlp-spacy-wiki.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
@@ -341,14 +382,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nlp-spacy-proprn.py">
+    <entry file="file://$PROJECT_DIR$/old/nlp-spacy-proprn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nlp-spacy-1.py">
+    <entry file="file://$PROJECT_DIR$/old/nlp-spacy-1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
@@ -379,7 +420,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spacy-wiki-matching-difflib.py">
+    <entry file="file://$PROJECT_DIR$/old/spacy-wiki-matching-difflib.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
           <caret line="61" column="37" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
@@ -389,7 +430,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nlp-nltk-1.py">
+    <entry file="file://$PROJECT_DIR$/old/nlp-nltk-1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
@@ -406,27 +447,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spacy-wiki-aggregation-matching.py">
+    <entry file="file://$PROJECT_DIR$/ambiguity_single_multiwords.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="57" column="9" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
+        <state relative-caret-position="-27">
+          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ambigous_words_frequency.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="62" column="18" lean-forward="true" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="18" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ambiguity_single_multiwords.txt">
+    <entry file="file://$PROJECT_DIR$/spacy-wiki-aggregation-matching.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        <state relative-caret-position="301">
+          <caret line="83" column="39" lean-forward="true" selection-start-line="76" selection-start-column="2" selection-end-line="83" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ambigous_words_frequency.py">
+    <entry file="file://$PROJECT_DIR$/single_word_matching.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="91" column="44" selection-start-line="91" selection-start-column="44" selection-end-line="91" selection-end-column="44" />
+        <state relative-caret-position="358">
+          <caret line="84" column="12" selection-start-line="84" selection-start-column="12" selection-end-line="84" selection-end-column="12" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>

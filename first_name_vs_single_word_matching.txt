@@ -1,0 +1,35 @@
+matching only first names:
+
+[['Harry', 'Harry_Potter'],
+ ['George', 'George_Weasley'],
+ ['Hermione', 'Hermione_Granger']]
+
+
+matching whole single word entities (same result as matching first and last name):
+
+[['Dursley', 'Mr._Dursley'],
+ ['Potter', 'Harry_Potter', 'Mr._Potter'],
+ ['Harry', 'Harry_Potter'],
+ ['Dumbledore', 'Albus_Dumbledore'],
+ ['McGonagall', 'Professor_McGonagall'],
+ ['Vernon', 'Uncle_Vernon'],
+ ['Quirrell', 'Professor_Quirrell'],
+ ['George', 'George_Weasley'],
+ ['Hermione', 'Hermione_Granger'],
+ ['Malfoy', 'Draco_Malfoy'],
+ ['Weasley', 'George_Weasley'],
+ ['Flamel', 'Nicolas_Flamel'],
+ ['Stone', "Sorcerer's_Stone"]]
+
+matching first names and plurals:
+
+[['Harry', 'Harry_Potter'],
+ ['George', 'George_Weasley'],
+ ['Hermione', 'Hermione_Granger'],
+ ['Potters', 'Potter'],
+ ['Dursleys', 'Dursley'],
+ ['Muggles', 'Muggle'],
+ ['Weasleys', 'Weasley'],
+ ['Gryffindors', 'Gryffindor'],
+ ['Slytherins', 'Slytherin'],
+ ['Bludgers', 'Bludger']]
