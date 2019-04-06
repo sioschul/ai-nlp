@@ -84,3 +84,29 @@ for ent in single_word_ents:
         if not extended:
             matched.append(belong_together)
 pp.pprint(matched)
+#put sentences togther passed on matched entities
+sentences_matched ={}
+for sublist in matched:
+    keys = ()
+    for item in sublist:
+        for item2 in sublist:
+            value = common_sentences[item].extend(common_sentences[item2])
+            if item2 not in keys:
+                keys = keys +(item2,)
+    sentences_matched[keys] = common_sentences[item]
+
+#remove duplicates
+for key, value in sentences_matched.items():
+    new_sentences = list(dict.fromkeys(value))
+    new_sentences.sort()
+    sentences_matched.update({key : new_sentences})
+
+sentences_clear = {}
+for key,value in sentences_matched.items():
+    if value not in sentences_clear.values():
+        sentences_clear[key] = value
+with open("Hermione.txt", 'w+') as f:
+    s=''
+    for x in sentences_clear[('Hermione','Hermione_Granger')]:
+        s+=x
+    f.write(s)
