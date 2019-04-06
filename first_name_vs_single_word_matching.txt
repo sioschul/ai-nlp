@@ -33,3 +33,17 @@ matching first names and plurals:
  ['Gryffindors', 'Gryffindor'],
  ['Slytherins', 'Slytherin'],
  ['Bludgers', 'Bludger']]
+
+matching non ambigous single with multi words+ambigous words if firstnames fit together:
+[['Dumbledore', 'Albus_Dumbledore'],
+ ['Dursley', 'Mr._Dursley'],
+ ['Flamel', 'Nicolas_Flamel'],
+ ['George', 'George_Weasley'],
+ ['Harry', 'Harry_Potter'],
+ ['Hermione', 'Hermione_Granger'],
+ ['Malfoy', 'Draco_Malfoy'],
+ ['McGonagall', 'Professor_McGonagall'],
+ ['Potter', 'Mr._Potter'],
+ ['Quirrell', 'Professor_Quirrell'],
+ ['Stone', "Sorcerer's_Stone"],
+ ['Vernon', 'Uncle_Vernon']]

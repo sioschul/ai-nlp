@@ -38,15 +38,18 @@ for i, s in enumerate(sentences):
 c = Counter(tokens)
 # remove unnecessary entries with <6 occurrences
 most_common = {k: c[k] for k in c if c[k] > 6}
+singles = []
+for k in most_common.keys():
+    if k not in singles:
+        singles.append(k)
 single_word_ents = []
 multi_word_ents = []
-for i in tokens:
-    if i in most_common.keys():
-        if "_" in i:
-            multi_word_ents.append(i)
-        else:
-            single_word_ents.append(i)
-'''
+for i in singles:
+    if "_" in i:
+        multi_word_ents.append(i)
+    else:
+        single_word_ents.append(i)
+
 matched_ents = {}
 for i in single_word_ents:
     belong_together = []
@@ -55,14 +58,21 @@ for i in single_word_ents:
             belong_together.append(j)
     if i not in matched_ents.keys():
         matched_ents[i]=belong_together
-#pp.pprint(matched_ents['Harry'])
-for ind, sublist in matched_ents.items():
+amb=[]
+for ind, m in matched_ents.items():
+    for ind2, m2 in matched_ents.items():
+        for i in m:
+            for j in m2:
+                if i == j and not ind == ind2 and j not in amb:
+                    amb.append(j)
+
+pp.pprint(amb)
+'''for ind, sublist in matched_ents.items():
     c=Counter(sublist)
     matched_ents[ind]=c
 delete = [key for key, sub in matched_ents.items() if sub == Counter()]
 for key in delete:
     del matched_ents[key]
-#pp.pprint(matched_ents)
 singles_single = []
 for k in single_word_ents:
     if k not in singles_single:
@@ -71,7 +81,7 @@ singles_multi = []
 for k in multi_word_ents:
     if k not in singles_multi:
         singles_multi.append(k)'''
-matched_ents_2 = []
+'''matched_ents_2 = []
 for ent in single_word_ents:
     belong_together = [ent]
     for i in multi_word_ents:
@@ -92,7 +102,7 @@ for ind,i in enumerate(matched_ents_2):
     if c != Counter() and len(c.items()) > 1:
         matched_ents_trans.append(c)
 pp.pprint(matched_ents_trans)
-'''for idx ,sublist in enumerate(matched_ents_2):
+for idx ,sublist in enumerate(matched_ents_2):
     temp = list(dict.fromkeys(sublist))
     temp.sort()
     matched_ents_2[idx]=temp

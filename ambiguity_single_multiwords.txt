@@ -1,3 +1,8 @@
+single word entities matched against multi word entities
+multiple mentions:
+george weasley: george, weasley
+harry potter: harry, potter (mr. potter)
+
 {'Dumbledore': Counter({'Albus_Dumbledore': 7}),
  'Dursley': Counter({'Mr._Dursley': 20}),
  'Flamel': Counter({'Nicolas_Flamel': 12}),
@@ -12,10 +17,6 @@
  'Vernon': Counter({'Uncle_Vernon': 106}),
  'Weasley': Counter({'George_Weasley': 8})}
 
-single word entities matched against multi word entities
-multiple mentions:
-george weasley: george, weasley
-harry potter: harry, potter (mr. potter)
 
 transitive result:
 [Counter({'Mr._Dursley': 9260, 'Dursley': 463}),

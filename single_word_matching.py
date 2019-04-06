@@ -60,7 +60,35 @@ for i in singles:
         multi_word_ents.append(i)
     else:
         single_word_ents.append(i)
-# match single words against multi words only first name
+
+# matching non ambiguos + first names:
+matched_ents = {}
+for i in single_word_ents:
+    belong_together = []
+    for j in multi_word_ents:
+        if i in j:
+            belong_together.append(j)
+    if i not in matched_ents.keys():
+        matched_ents[i]=belong_together
+amb=[]
+for ind, m in matched_ents.items():
+    for ind2, m2 in matched_ents.items():
+        for i in m:
+            for j in m2:
+                if i == j and not ind == ind2 and j not in amb:
+                    amb.append(j)
+matched = []
+for ind, m in matched_ents.items():
+    belong_together = [ind]
+    for entry in m:
+        if entry not in amb:
+            belong_together.append(entry)
+        else:
+            if entry.startswith(ind):
+                belong_together.append(entry)
+    if len(belong_together) > 1:
+        matched.append(belong_together)
+'''# match single words against multi words only first name
 matched = []
 for ent in single_word_ents:
     belong_together = [ent]
@@ -68,8 +96,8 @@ for ent in single_word_ents:
         if i.startswith(ent):
             belong_together.append(i)
     if len(belong_together) > 1:
-        matched.append(belong_together)
-for ent in single_word_ents:
+        matched.append(belong_together)'''
+'''for ent in single_word_ents:
     belong_together = [ent]
     for i in single_word_ents:
         if ent == i +'s':
@@ -82,8 +110,10 @@ for ent in single_word_ents:
                     sublist.extend(belong_together)
                     extended = True
         if not extended:
-            matched.append(belong_together)
+            matched.append(belong_together'''
+matched.sort()
 pp.pprint(matched)
+
 #put sentences togther passed on matched entities
 sentences_matched ={}
 for sublist in matched:
@@ -105,8 +135,4 @@ sentences_clear = {}
 for key,value in sentences_matched.items():
     if value not in sentences_clear.values():
         sentences_clear[key] = value
-with open("Hermione.txt", 'w+') as f:
-    s=''
-    for x in sentences_clear[('Hermione','Hermione_Granger')]:
-        s+=x
-    f.write(s)
+
