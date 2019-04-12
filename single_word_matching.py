@@ -18,7 +18,7 @@ spacy_stopwords.add('no')
 spacy_stopwords.add('yeah')
 
 # read book
-with open("Harry_Potter_and_the_Sorcerer.txt") as f:
+with open("Harry_Potter_and_the_Order.txt") as f:
     book = f.read()
 
 # split book into sentences

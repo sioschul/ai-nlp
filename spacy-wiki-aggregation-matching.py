@@ -8,16 +8,18 @@ import nltk
 import pprint as pp
 import re
 import gensim
+
+
 # load model
 nlp = spacy.load('xx_ent_wiki_sm')
 
 # for stop word filtering
-spacy.load('en')
-spacy_stopwords = spacy.lang.en.stop_words.STOP_WORDS
+spacy.load('it_core_news_sm')
+spacy_stopwords = spacy.lang.it.stop_words.STOP_WORDS
 spacy_stopwords.add('yes')
 spacy_stopwords.add('no')
 spacy_stopwords.add('yeah')
-
+pp.pprint(spacy_stopwords)
 # read book
 with open("Harry_Potter_and_the_Sorcerer.txt") as f:
     book = f.read()

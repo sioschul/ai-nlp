@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0e026d0-a6a5-42f4-9e9b-136eed46ee81" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ambigous_words_frequency.py" beforeDir="false" afterPath="$PROJECT_DIR$/ambigous_words_frequency.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ambiguity_single_multiwords.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ambiguity_single_multiwords.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first_name_vs_single_word_matching.txt" beforeDir="false" afterPath="$PROJECT_DIR$/first_name_vs_single_word_matching.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities_HP1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/old/entities_HP1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first_name_vs_single_word_matching.txt" beforeDir="false" afterPath="$PROJECT_DIR$/old/first_name_vs_single_word_matching.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/single_word_matching.py" beforeDir="false" afterPath="$PROJECT_DIR$/single_word_matching.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacy-wiki-aggregation-matching.py" beforeDir="false" afterPath="$PROJECT_DIR$/spacy-wiki-aggregation-matching.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacy-wiki-aggregation.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +16,33 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/structured_approach.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="15" column="71" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/functions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="238" column="56" selection-start-line="238" selection-start-column="56" selection-end-line="238" selection-end-column="56" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#141#306#0" />
+                <element signature="e#131#1743#0" />
+                <element signature="e#3737#4008#0" />
+                <element signature="e#2706#3023#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -26,7 +54,6 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>yes</find>
-      <find>harry</find>
       <find>privet</find>
       <find>hermio</find>
       <find>ron weasley</find>
@@ -35,8 +62,21 @@
       <find>Dumbledore slipped</find>
       <find>profess</find>
       <find>defa</find>
-      <find>draco</find>
       <find>albus</find>
+      <find>hermione</find>
+      <find>sirius</find>
+      <find>draco</find>
+      <find>lucius</find>
+      <find>ministry</find>
+      <find>mad</find>
+      <find>mr</find>
+      <find>harry</find>
+      <find>mr.</find>
+      <find>madam_h</find>
+      <find>madam</find>
+      <find>black</find>
+      <find>voldemort</find>
+      <find>he was sure there were lots</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -54,10 +94,12 @@
         <option value="$PROJECT_DIR$/spacy-wiki-aggregation.py" />
         <option value="$PROJECT_DIR$/spacy-wiki-matching-difflib.py" />
         <option value="$PROJECT_DIR$/ambiguity_single_multiwords.txt" />
-        <option value="$PROJECT_DIR$/spacy-wiki-aggregation-matching.py" />
         <option value="$PROJECT_DIR$/word_cloud.py" />
         <option value="$PROJECT_DIR$/ambigous_words_frequency.py" />
         <option value="$PROJECT_DIR$/single_word_matching.py" />
+        <option value="$PROJECT_DIR$/spacy-wiki-aggregation-matching.py" />
+        <option value="$PROJECT_DIR$/functions.py" />
+        <option value="$PROJECT_DIR$/structured_approach.py" />
       </list>
     </option>
   </component>
@@ -93,11 +135,11 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Acer\Documents\GitHub\ai-nlp\old" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Acer\Documents\GitHub\ai-nlp" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Acer\Documents\GitHub\ai-nlp\old" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -112,7 +154,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.single_word_matching">
+  <component name="RunManager" selected="Python.structured_approach">
     <configuration name="ambigous_words_frequency" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ai-nlp" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -176,7 +218,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="spacy-wiki-matching-difflib" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="structured_approach" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ai-nlp" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -188,7 +230,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Acer\Documents\GitHub\ai-nlp\old\spacy-wiki-matching-difflib.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/structured_approach.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -220,11 +262,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.structured_approach" />
+        <item itemvalue="Python.spacy-wiki-aggregation-matching" />
         <item itemvalue="Python.single_word_matching" />
         <item itemvalue="Python.ambigous_words_frequency" />
         <item itemvalue="Python.word_cloud" />
-        <item itemvalue="Python.spacy-wiki-aggregation-matching" />
-        <item itemvalue="Python.spacy-wiki-matching-difflib" />
       </list>
     </recent_temporary>
   </component>
@@ -271,6 +313,25 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49966952" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4990086" weight="0.3286119" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50033045" side_tool="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49966952" weight="0.3286119" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -367,26 +428,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Harry_Potter_and_the_Deathly.txt" />
-    <entry file="file://$PROJECT_DIR$/Harry_Potter_and_the_Order.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Harry_Potter_and_the_Sorcerer.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="1964" column="16" selection-start-line="1964" selection-start-column="5" selection-end-line="1964" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spacy-wiki-aggregation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/spacy-wiki-aggregation.py" />
     <entry file="file://$PROJECT_DIR$/old/spacy-wiki-matching-difflib.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -430,13 +472,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spacy-wiki-aggregation-matching.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" selection-start-column="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ambiguity_single_multiwords.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -444,23 +479,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/single_word_matching.py">
+    <entry file="file://$PROJECT_DIR$/ambigous_words_frequency.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="89" column="39" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
+        <state relative-caret-position="409">
+          <caret line="71" column="23" lean-forward="true" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ambigous_words_frequency.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/itertools.pyi">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/single_word_matching.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="52" selection-start-line="52" selection-end-line="66" selection-end-column="33" />
+        <state relative-caret-position="562">
+          <caret line="110" column="35" lean-forward="true" selection-start-line="110" selection-start-column="35" selection-end-line="110" selection-end-column="35" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spacy-wiki-aggregation-matching.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/first_name_vs_single_word_matching.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-459" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Harry_Potter_and_the_Sorcerer.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="1964" column="16" selection-start-line="1964" selection-start-column="5" selection-end-line="1964" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Harry_Potter_and_the_Order.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="9294" column="128" selection-start-line="9294" selection-start-column="128" selection-end-line="9294" selection-end-column="322" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="238" column="56" selection-start-line="238" selection-start-column="56" selection-end-line="238" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#141#306#0" />
+            <element signature="e#131#1743#0" />
+            <element signature="e#3737#4008#0" />
+            <element signature="e#2706#3023#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/structured_approach.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="71" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
         </state>
       </provider>
     </entry>
