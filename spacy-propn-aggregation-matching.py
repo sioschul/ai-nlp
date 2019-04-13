@@ -4,6 +4,7 @@ import nltk
 from collections import Counter, OrderedDict
 import pprint as pp
 
+
 # load model
 nlp = spacy.load('en')
 

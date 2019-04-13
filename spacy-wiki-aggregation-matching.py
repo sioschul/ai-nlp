@@ -9,7 +9,7 @@ import pprint as pp
 import re
 import gensim
 
-
+print(re.sub('[\.\'\!\?]$', '', 'NO!'))
 # load model
 nlp = spacy.load('xx_ent_wiki_sm')
 
@@ -19,7 +19,7 @@ spacy_stopwords = spacy.lang.it.stop_words.STOP_WORDS
 spacy_stopwords.add('yes')
 spacy_stopwords.add('no')
 spacy_stopwords.add('yeah')
-pp.pprint(spacy_stopwords)
+
 # read book
 with open("Harry_Potter_and_the_Sorcerer.txt") as f:
     book = f.read()

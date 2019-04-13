@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f0e026d0-a6a5-42f4-9e9b-136eed46ee81" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entities_HP1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/old/entities_HP1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first_name_vs_single_word_matching.txt" beforeDir="false" afterPath="$PROJECT_DIR$/old/first_name_vs_single_word_matching.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/single_word_matching.py" beforeDir="false" afterPath="$PROJECT_DIR$/single_word_matching.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spacy-propn-aggregation-matching.py" beforeDir="false" afterPath="$PROJECT_DIR$/spacy-propn-aggregation-matching.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spacy-wiki-aggregation-matching.py" beforeDir="false" afterPath="$PROJECT_DIR$/spacy-wiki-aggregation-matching.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy-wiki-aggregation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/structured_approach.py" beforeDir="false" afterPath="$PROJECT_DIR$/structured_approach.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,26 +16,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/structured_approach.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="15" column="71" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
+            <state relative-caret-position="307">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="238" column="56" selection-start-line="238" selection-start-column="56" selection-end-line="238" selection-end-column="56" />
+            <state relative-caret-position="272">
+              <caret line="114" column="35" selection-start-line="114" selection-start-column="35" selection-end-line="114" selection-end-column="35" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
-                <element signature="e#141#306#0" />
-                <element signature="e#131#1743#0" />
-                <element signature="e#3737#4008#0" />
-                <element signature="e#2706#3023#0" />
+                <element signature="e#0#16#0" expanded="true" />
+                <element signature="e#178#576#0" />
+                <element signature="e#640#2252#0" />
+                <element signature="e#3999#4270#0" />
+                <element signature="e#5185#5862#0" />
+                <element signature="e#5862#6179#0" />
+                <element signature="e#7042#7888#0" />
+                <element signature="e#8727#10009#0" />
+                <element signature="e#8002#8442#0" />
               </folding>
             </state>
           </provider>
@@ -53,30 +56,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>yes</find>
-      <find>privet</find>
-      <find>hermio</find>
-      <find>ron weasley</find>
-      <find>print</find>
-      <find>this man's</find>
-      <find>Dumbledore slipped</find>
-      <find>profess</find>
-      <find>defa</find>
-      <find>albus</find>
-      <find>hermione</find>
-      <find>sirius</find>
-      <find>draco</find>
-      <find>lucius</find>
-      <find>ministry</find>
       <find>mad</find>
-      <find>mr</find>
-      <find>harry</find>
-      <find>mr.</find>
-      <find>madam_h</find>
       <find>madam</find>
-      <find>black</find>
-      <find>voldemort</find>
-      <find>he was sure there were lots</find>
+      <find>lucius_malfoy</find>
+      <find>madam_bo</find>
+      <find>mrs_wea</find>
+      <find>harr</find>
+      <find>madam_b</find>
+      <find>grang</find>
+      <find>luci</find>
+      <find>potter</find>
+      <find>and</find>
+      <find>acc</find>
+      <find>dumbledore</find>
+      <find>print</find>
+      <find>harry</find>
+      <find>mrs_we</find>
+      <find>weas</find>
+      <find>''</find>
+      <find>hogsm</find>
+      <find>hogs</find>
+      <find>head</find>
+      <find>Hog's</find>
+      <find>pose</find>
+      <find>DA</find>
+      <find>'</find>
+      <find>NO</find>
+      <find>'NO</find>
+      <find>albu</find>
+      <find>dumb</find>
+      <find>verno</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -89,7 +98,6 @@
         <option value="$PROJECT_DIR$/nlp.py" />
         <option value="$PROJECT_DIR$/nlp-spacy-1.py" />
         <option value="$PROJECT_DIR$/nlp-spacy-wiki.py" />
-        <option value="$PROJECT_DIR$/spacy-propn-aggregation-matching.py" />
         <option value="$PROJECT_DIR$/nlp-nltk-1.py" />
         <option value="$PROJECT_DIR$/spacy-wiki-aggregation.py" />
         <option value="$PROJECT_DIR$/spacy-wiki-matching-difflib.py" />
@@ -97,9 +105,10 @@
         <option value="$PROJECT_DIR$/word_cloud.py" />
         <option value="$PROJECT_DIR$/ambigous_words_frequency.py" />
         <option value="$PROJECT_DIR$/single_word_matching.py" />
+        <option value="$PROJECT_DIR$/spacy-propn-aggregation-matching.py" />
         <option value="$PROJECT_DIR$/spacy-wiki-aggregation-matching.py" />
-        <option value="$PROJECT_DIR$/functions.py" />
         <option value="$PROJECT_DIR$/structured_approach.py" />
+        <option value="$PROJECT_DIR$/functions.py" />
       </list>
     </option>
   </component>
@@ -155,7 +164,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.structured_approach">
-    <configuration name="ambigous_words_frequency" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="functions" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ai-nlp" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -167,7 +176,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ambigous_words_frequency.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/functions.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -189,6 +198,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/single_word_matching.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="spacy-propn-aggregation-matching" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ai-nlp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spacy-propn-aggregation-matching.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -239,34 +269,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="word_cloud" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ai-nlp" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/word_cloud.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.structured_approach" />
         <item itemvalue="Python.spacy-wiki-aggregation-matching" />
+        <item itemvalue="Python.spacy-propn-aggregation-matching" />
+        <item itemvalue="Python.functions" />
         <item itemvalue="Python.single_word_matching" />
-        <item itemvalue="Python.ambigous_words_frequency" />
-        <item itemvalue="Python.word_cloud" />
       </list>
     </recent_temporary>
   </component>
@@ -449,13 +458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spacy-propn-aggregation-matching.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Hermione.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -479,38 +481,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ambigous_words_frequency.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="71" column="23" lean-forward="true" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/itertools.pyi">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/single_word_matching.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="110" column="35" lean-forward="true" selection-start-line="110" selection-start-column="35" selection-end-line="110" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spacy-wiki-aggregation-matching.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/old/first_name_vs_single_word_matching.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -531,24 +503,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.py">
+    <entry file="file://$PROJECT_DIR$/single_word_matching.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="238" column="56" selection-start-line="238" selection-start-column="56" selection-end-line="238" selection-end-column="56" />
+        <state relative-caret-position="-821">
+          <caret column="14" selection-start-column="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ambigous_words_frequency.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="96" column="20" lean-forward="true" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="20" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <element signature="e#141#306#0" />
-            <element signature="e#131#1743#0" />
-            <element signature="e#3737#4008#0" />
-            <element signature="e#2706#3023#0" />
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spacy-propn-aggregation-matching.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spacy-wiki-aggregation-matching.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/structured_approach.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" column="71" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
+        <state relative-caret-position="307">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="114" column="35" selection-start-line="114" selection-start-column="35" selection-end-line="114" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+            <element signature="e#178#576#0" />
+            <element signature="e#640#2252#0" />
+            <element signature="e#3999#4270#0" />
+            <element signature="e#5185#5862#0" />
+            <element signature="e#5862#6179#0" />
+            <element signature="e#7042#7888#0" />
+            <element signature="e#8727#10009#0" />
+            <element signature="e#8002#8442#0" />
+          </folding>
         </state>
       </provider>
     </entry>
