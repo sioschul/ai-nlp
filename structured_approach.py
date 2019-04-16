@@ -24,8 +24,8 @@ single_word_ents, multi_word_ents = fn.divide_into_single_and_multi_word(single_
 # 1 = gensim accurracy = min accuracy to consider
 # 2 = matching based on most frequent words accuracy = min occurence to consider
 # 3 = matching based on neighbors accuracy = number of sentences around to look at
-matched = fn.entity_matching(sentences, single_word_ents, multi_word_ents, common_sentences, 2, 3)
+matched = fn.entity_matching(sentences, single_word_ents, multi_word_ents, common_sentences, 3, 3)
 # match sentences of matched entities together
 sentences_clear = fn.sort_sentences_to_matched_entities(common_sentences, matched)
-#pp.pprint(matched)
+
 

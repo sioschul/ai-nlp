@@ -4,7 +4,6 @@
     <list default="true" id="f0e026d0-a6a5-42f4-9e9b-136eed46ee81" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spacy-propn-aggregation-matching.py" beforeDir="false" afterPath="$PROJECT_DIR$/spacy-propn-aggregation-matching.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/structured_approach.py" beforeDir="false" afterPath="$PROJECT_DIR$/structured_approach.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +17,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/structured_approach.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="306">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
@@ -27,13 +26,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="83" column="24" lean-forward="true" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
+            <state relative-caret-position="341">
+              <caret line="406" column="57" lean-forward="true" selection-start-line="406" selection-start-column="57" selection-end-line="406" selection-end-column="57" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
-                <element signature="e#6165#6842#0" />
-                <element signature="e#6934#7396#0" />
-                <element signature="e#12636#13076#0" />
               </folding>
             </state>
           </provider>
@@ -50,11 +46,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>DA</find>
-      <find>'</find>
-      <find>NO</find>
-      <find>'NO</find>
-      <find>albu</find>
       <find>dumb</find>
       <find>verno</find>
       <find>potter</find>
@@ -62,8 +53,6 @@
       <find>mr._</find>
       <find>ron</find>
       <find>malfo</find>
-      <find>harry</find>
-      <find>black</find>
       <find>peter</find>
       <find>pet</find>
       <find>ambigu</find>
@@ -79,6 +68,13 @@
       <find>mrs_we</find>
       <find>mrs</find>
       <find>madam</find>
+      <find>great</find>
+      <find>black</find>
+      <find>harry</find>
+      <find>cornelius</find>
+      <find>fud</find>
+      <find>malf</find>
+      <find>wea</find>
       <find>mal</find>
     </findStrings>
   </component>
@@ -120,6 +116,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -131,7 +128,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -505,30 +501,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spacy-wiki-aggregation-matching.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Harry_Potter_and_the_Prisoner.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="14651" column="61" lean-forward="true" selection-start-line="14650" selection-end-line="14651" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ambigous_words_frequency.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="96" column="20" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -542,22 +518,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../Uni/Arbeiten/AILS2/NLP/venv/Lib/site-packages/gensim/models/keyedvectors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="461" selection-start-line="461" selection-end-line="461" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spacy-wiki-aggregation-matching.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2328">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ambigous_words_frequency.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="96" column="20" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/structured_approach.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="306">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="83" column="24" lean-forward="true" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
+        <state relative-caret-position="341">
+          <caret line="406" column="57" lean-forward="true" selection-start-line="406" selection-start-column="57" selection-end-line="406" selection-end-column="57" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
-            <element signature="e#6165#6842#0" />
-            <element signature="e#6934#7396#0" />
-            <element signature="e#12636#13076#0" />
           </folding>
         </state>
       </provider>

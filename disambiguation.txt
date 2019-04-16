@@ -1,0 +1,98 @@
+Harry Potter 5
+
+Ambiguous entities at first:
+['Harry_Potter', 'Sirius_Black', 'Harry_Potter', 'Mr_Potter', 'Ministry_of_Magic', 'The_Ministry', 'Arthur_Weasley', 'Mr_Weasley', 
+'Mrs_Weasley', 'Arthur_Weasley', 'Cornelius_Fudge', 'Dark_Lord', 'Defence_Against_the_Dark_Arts', 'Draco_Malfoy', 'Lucius_Malfoy', 
+'Draco_Malfoy', 'Great_Hall', 'Entrance_Hall', 'Professor_Umbridge', 'Dolores_Umbridge', 'Zacharias_Smith']
+
+over all entity matches:
+matching unambiguous + first and last name + mr. rule:
+['Albus_Dumbledore', 'Dumbledore']
+['Arthur', 'Arthur_Weasley']
+['Aunt_Petunia', 'Petunia']
+['Bellatrix', 'Bellatrix_Lestrange']
+['Black', 'Sirius', 'Sirius_Black']
+['Cedric', 'Cedric_Diggory']
+['Cho', 'Cho_Chang']
+['Cloak', 'Invisibility_Cloak']
+['Cornelius', 'Cornelius_Fudge', 'Fudge']
+['Daily_Prophet', 'Prophet']
+['Dark', 'Dark_Lord']
+['Dean', 'Dean_Thomas']
+['Dolores', 'Dolores_Umbridge', 'Professor_Umbridge', 'Umbridge']
+['Draco', 'Draco_Malfoy']
+['Ernie', 'Ernie_Macmillan']
+['Flitwick', 'Professor_Flitwick']
+['Forbidden_Forest', 'Forest']
+['Gryffindor', 'Gryffindor_Tower']
+['Harry', 'Harry_Potter', 'Mr_Potter', 'Potter']
+['Hermione', 'Hermione_Granger']
+['Katie', 'Katie_Bell']
+['Kingsley', 'Kingsley_Shacklebolt']
+['Lee', 'Lee_Jordan']
+['Lord_Voldemort', 'Voldemort']
+['Luna', 'Luna_Lovegood']
+['Mad_Eye_Moody', 'Moody']
+['McGonagall', 'Professor_McGonagall']
+['Minister', 'Minister_for_Magic']
+['Ministry', 'Ministry_of_Magic', 'The_Ministry']
+['Nearly_Headless_Nick', 'Nick']
+['Order', 'Order_of_the_Phoenix']
+['Phineas', 'Phineas_Nigellus']
+['Professor_Trelawney', 'Trelawney']
+['Smith', 'Zacharias', 'Zacharias_Smith']
+['Uncle_Vernon', 'Vernon']
+
+still ambiguous entities after first matching:
+{'Weasley': ['Mr_Weasley', 'Mrs_Weasley', 'Arthur_Weasley'], 'Dark': ['Defence_Against_the_Dark_Arts'], 
+'Malfoy': ['Lucius_Malfoy', 'Draco_Malfoy'], 'Hall': ['Great_Hall', 'Entrance_Hall']}
+
+matching still ambiguous entities with gensim (very low accuracy needed):
+['Dark', 'Dark_Lord', 'Defence_Against_the_Dark_Arts']
+['Entrance_Hall', 'Hall']
+['Lucius_Malfoy', 'Malfoy']
+['Mr_Weasley', 'Weasley']
+
+matching still ambiguous entities based on entity frequency:
+['Dark', 'Dark_Lord', 'Defence_Against_the_Dark_Arts']
+['Draco', 'Draco_Malfoy', 'Malfoy']
+['Great_Hall', 'Hall']
+['Mrs_Weasley', 'Weasley']
+
+specific entity matches:
+based on neighbors:
+before
+Weasley:74
+Mr_Weasley:131
+Mrs_Weasley:196
+Arthur_Weasley:10
+after
+Weasley:64
+Mr_Weasley:135
+Mrs_Weasley:201
+Arthur_Weasley:11
+
+before
+Dark:8
+Defence_Against_the_Dark_Arts:43
+after
+Dark:8
+Defence_Against_the_Dark_Arts:43
+
+before
+Malfoy:164
+Lucius_Malfoy:23
+Draco_Malfoy:19
+after
+Malfoy:158
+Lucius_Malfoy:25
+Draco_Malfoy:23
+
+before
+Hall:17
+Great_Hall:43
+Entrance_Hall:33
+after
+Hall:13
+Great_Hall:45
+Entrance_Hall:35

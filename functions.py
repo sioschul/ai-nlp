@@ -115,6 +115,7 @@ def entity_extraction(sentences, lang, min_occurence=6):
     # spacy entity model
     for i, s in enumerate(sentences):
         s = re.sub('\s+', ' ', s)
+        s = s.replace('-',' ')
         s = s.strip()
         doc = nlp(s)
         for ent in doc.ents:
@@ -164,10 +165,9 @@ def entity_matching(sentences, single_word_ents, multi_word_ents, common_sentenc
     # single word ents matched against multi word ents
     matched_ents = match_single_against_multi_word(single_word_ents, multi_word_ents)
     # ambiguous multi word ents
-    ambigous = find_ambiguous_words(matched_ents)
+    ambiguous = find_ambiguous_words(matched_ents)
     # unambiguous matches and first name matches for ambiguous ones
-    matched, amb = direct_matching(matched_ents, ambigous)
-    #matched_fuzzy=[]
+    matched, amb = direct_matching(matched_ents, ambiguous)
     if rule == 1:
         # fuzzy matching with gensim
         matched_fuzzy = fuzzy_matching_gensim(sentences, single_word_ents, multi_word_ents, matched, amb, accuracy)
@@ -251,6 +251,17 @@ def direct_matching(matched_ents, ambigous):
                 belong_together.append(m[1])
                 del amb[ind]
         matched.append(belong_together)
+    # now unambiguos entities matched if there is a hind they belong together
+    delete =[]
+    for ind, m in amb.items():
+        if len(m) == 1 and(m[0].startswith(ind)or m[0].endswith(ind) or ind.startswith(m[0]) or ind.endswith(m[0])):
+            matched.append([ind,m[0]])
+            for sl in matched:
+                if sl == [ind]:
+                    matched.remove(sl)
+            delete.append(ind)
+    for ind in delete:
+        del amb[ind]
     # add remaining ambiguous entites as distinct entities
     for ind, m in matched_ents.items():
         for entry in m:
@@ -264,7 +275,7 @@ def direct_matching(matched_ents, ambigous):
     # transitivity
     for sl in matched:
         for sl2 in matched:
-            if sl != sl2 and len(set(sl).intersection(sl2)) > 0:
+            if sl != sl2 and not set(sl).isdisjoint(sl2):
                 sl.extend(sl2)
     # remove duplicate lists
     for idx, sublist in enumerate(matched):
@@ -281,6 +292,7 @@ def fuzzy_matching_gensim(sentences, single_word, multi_word, matched, amb, accu
     # gensim word embedding model
     data = []
     for i in sentences:
+        i = i.replace('-', ' ')
         temp = []
 
         # tokenize the sentence into words
@@ -293,18 +305,17 @@ def fuzzy_matching_gensim(sentences, single_word, multi_word, matched, amb, accu
                                     size=100, window=5, sg=1)
     # match ambiguos entites with most similar ones
     for ind, m in amb.items():
+        matches = {}
         for x in m:
-            match = ''
-            for s in model1.wv.most_similar(x):
-                if s[0] in single_word or s[0] in multi_word and s[1] > accuracy:
-                    match = s[0]
-                    break
-            if match != '':
-                for sl in matched:
-                    if x in sl:
-                        sl.append(match)
-                        if sl == [match]:
-                            matched.remove(sl)
+            if model1.wv.similarity(x, ind) > accuracy:
+                matches[x] = model1.wv.similarity(x, ind)
+        if len(matches) > 0:
+            match = max(matches.items(), key=operator.itemgetter(1))[0]
+            for sl in matched:
+                if ind in sl:
+                    sl.append(match)
+                    if sl == [match]:
+                        matched.remove(sl)
     # match each entity with the most similar other entities
     '''for sl in matched:
         add = []
@@ -351,7 +362,7 @@ def frequency_matching(amb, matched, accuracy):
     # transitivity: we have not [Harry, Harry Potter] and [Potter, Harry Potter] we want [Harry, Harry Potter, Potter]
     for sl in matched:
         for sl2 in matched:
-            if sl != sl2 and len(set(sl).intersection(sl2)) > 0:
+            if sl != sl2 and  not set(sl).isdisjoint(sl2):
                 sl.extend(sl2)
 
     # remove duplicate lists
@@ -365,6 +376,10 @@ def frequency_matching(amb, matched, accuracy):
 
 def look_around_matching(amb, sentences, common_sentences, accuracy):
     for ind, m in amb.items():
+        print('before')
+        print(str(ind)+':'+str(len(common_sentences[ind])))
+        for x in m:
+            print(str(x) + ':' + str(len(common_sentences[x])))
         # for each sentence in the ambiguous entities sentences search that sentence in the book
         for s in common_sentences[ind]:
             for ind1, se in enumerate(sentences):
@@ -386,12 +401,16 @@ def look_around_matching(amb, sentences, common_sentences, accuracy):
                             for word in s2.split(' '):
                                 if word == x:
                                     count_mentions.append(x)
-            count=Counter(count_mentions)
-            if count != Counter() and len(set(count.values()))== len(count.values()):
-                    max_c = max(count.items(), key=operator.itemgetter(1))[0]
-                    common_sentences[max_c].append(s)
-                    common_sentences[ind].remove(s)
-
+                    count=Counter(count_mentions)
+                    if count != Counter() and len(set(count.values()))== len(count.values()):
+                        max_c = max(count.items(), key=operator.itemgetter(1))[0]
+                        common_sentences[max_c].append(s)
+                        common_sentences[ind].remove(s)
+                    break
+        print('after')
+        print(str(ind)+':'+str(len(common_sentences[ind])))
+        for x in m:
+            print(str(x) + ':' + str(len(common_sentences[x])))
 def sort_sentences_to_matched_entities(common_sentences, matched):
     # put sentences together based on matched entities
     sentences_matched = {}
