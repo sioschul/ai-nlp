@@ -96,3 +96,31 @@ after
 Hall:13
 Great_Hall:45
 Entrance_Hall:35
+
+result of the first rules for Chronicles of Narnia I:
+[['Adam', 'Son_of_Adam'],
+ ['Aslan'],
+ ['Beaver', 'Mr._Beaver', 'Mrs._Beaver'],
+ ['Beavers'],
+ ['Cair_Paravel'],
+ ['Christmas'],
+ ['Daughter_of_Eve'],
+ ['Dwarf'],
+ ['Edmund'],
+ ['Faun'],
+ ['Giant'],
+ ['Kings'],
+ ['Lion'],
+ ['Lu'],
+ ['Lucy'],
+ ['Majesty'],
+ ['Mr._Tumnus', 'Tumnus'],
+ ['Narnia'],
+ ['Peter'],
+ ['Queen'],
+ ['Queens'],
+ ['Stone_Table'],
+ ['Susan'],
+ ['Turkish_Delight'],
+ ['White_Witch', 'Witch'],
+ ['Wolf']]

@@ -8,22 +8,14 @@ import nltk
 import spacy
 from collections import Counter
 
-entity_frequency = Counter()
 language = ''
-
+min_occ= 0
 
 # read and tokenize book
-def read_and_tokenize(book, current_sentence):
-    # read book
-    text = ''
+def read_and_tokenize(book):
+    # read whole book
     with open(book) as f:
-        # read text until current sentence
-        for line in f:
-            if current_sentence in line.strip():
-                break
-            text = text + line
-        # adding last line with current sentence
-        text = text + line
+        text = f.read()
     # split book into sentences
     sentences = nltk.tokenize.sent_tokenize(text)
     return sentences
@@ -40,35 +32,35 @@ def load_stop_words(language):
         spacy_stopwords.add('hey')
     if language == 'de':
         spacy.load('de_core_news_sm')
-        spacy_stopwords = spacy.lang.en.stop_words.STOP_WORDS
+        spacy_stopwords = spacy.lang.de.stop_words.STOP_WORDS
         spacy_stopwords.add('ja')
         spacy_stopwords.add('nein')
         spacy_stopwords.add('yeah')
         spacy_stopwords.add('hey')
     if language == 'es':
         spacy.load('es_core_news_sm')
-        spacy_stopwords = spacy.lang.en.stop_words.STOP_WORDS
+        spacy_stopwords = spacy.lang.es.stop_words.STOP_WORDS
         spacy_stopwords.add('sí')
         spacy_stopwords.add('no')
         spacy_stopwords.add('yeah')
         spacy_stopwords.add('hey')
     if language == 'fr':
         spacy.load('fr_core_news_sm')
-        spacy_stopwords = spacy.lang.en.stop_words.STOP_WORDS
+        spacy_stopwords = spacy.lang.fr.stop_words.STOP_WORDS
         spacy_stopwords.add('oui')
         spacy_stopwords.add('non')
         spacy_stopwords.add('yeah')
         spacy_stopwords.add('hey')
     if language == 'pt':
         spacy.load('pt_core_news_sm')
-        spacy_stopwords = spacy.lang.en.stop_words.STOP_WORDS
+        spacy_stopwords = spacy.lang.pt.stop_words.STOP_WORDS
         spacy_stopwords.add('sim')
         spacy_stopwords.add('não')
         spacy_stopwords.add('yeah')
         spacy_stopwords.add('hey')
     if language == 'it':
         spacy.load('it_core_news_sm')
-        spacy_stopwords = spacy.lang.en.stop_words.STOP_WORDS
+        spacy_stopwords = spacy.lang.it.stop_words.STOP_WORDS
         spacy_stopwords.add('sì')
         spacy_stopwords.add('no')
         spacy_stopwords.add('yeah')
@@ -103,8 +95,10 @@ def load_honorifics(language):
 
 # extracting entities and related sentences
 def entity_extraction(sentences, lang, min_occurence=6):
-    global entity_frequency
     global language
+    global min_occ
+    min_occ = min_occurence
+    entities_for_cooc = []
     language = lang
     tokens = []
     sentences_by_ents = {}
@@ -114,30 +108,36 @@ def entity_extraction(sentences, lang, min_occurence=6):
     nlp = spacy.load('xx_ent_wiki_sm')
     # spacy entity model
     for i, s in enumerate(sentences):
+        entity_sentence = ''
         s = re.sub('\s+', ' ', s)
         s = s.replace('-',' ')
         s = s.strip()
         doc = nlp(s)
+        names = []
         for ent in doc.ents:
-            name = ent.text
+            name = ent.text.strip()
             # replace whitespace in multi word ents with "_"
             if len(ent.text.split()) > 1:
                 name = ent.text.replace(" ", "_")
-                sentences[i] = sentences[i].replace(ent.text, name)
-            if name.endswith("!") or name.endswith("?") or name.endswith("\'") or name.endswith("."):
-                name = re.sub('[\.\'\!\?]$', '', name)
+            if not (not name.endswith("!") and not name.endswith("?") and not name.endswith("\'") and not name.endswith(
+                    '.') and not name.endswith("\"")) or name.startswith("\""):
+                name = re.sub('[\.\'\!\?\"]$', '', name)
             # remove whitespaces from ents and remove stopwords from ents
             if name.lower() not in spacy_stopwords and not name.startswith('\'') and not name.startswith(
                     '\"') and name != '':
-                # keep all sentences from the same entity together
-                # assuming entities with the same name are always the same type/person in the same book
-                sentences_by_ents.setdefault(name, []).append(sentences[i].strip())
-                # keep track of entities with their tag
-                tokens.append(name)
-
+                sentences[i] = sentences[i].replace(ent.text, name)
+                names.append(name)
+                entity_sentence = entity_sentence + name + ' '
+        for name in names:
+            # keep all sentences from the same entity together
+            # assuming entities with the same name are always the same type/person in the same book
+            sentences_by_ents.setdefault(name, {})[i] = sentences[i]
+            # keep track of entities with their tag
+            tokens.append(name)
+        if entity_sentence != '':
+            entities_for_cooc.append(entity_sentence)
     # remove unnecessary entries with <6 occurrences4
     c = Counter(tokens)
-    entity_frequency = c
     most_common = {k: c[k] for k in c if c[k] > min_occurence}
     common_sentences = {k: sentences_by_ents[k] for k in sentences_by_ents if len(sentences_by_ents[k]) > min_occurence}
     # reduce to list of names
@@ -145,7 +145,7 @@ def entity_extraction(sentences, lang, min_occurence=6):
     for k in most_common.keys():
         if k not in single_tokens:
             single_tokens.append(k)
-    return single_tokens, common_sentences
+    return single_tokens, common_sentences, c, entities_for_cooc
 
 
 def divide_into_single_and_multi_word(single_tokens):
@@ -160,7 +160,7 @@ def divide_into_single_and_multi_word(single_tokens):
     return single_word_ents, multi_word_ents
 
 
-# match entities first certain matching then fuzzy matching
+'''# match entities first certain matching then fuzzy matching
 def entity_matching(sentences, single_word_ents, multi_word_ents, common_sentences, accuracy, rule):
     # single word ents matched against multi word ents
     matched_ents = match_single_against_multi_word(single_word_ents, multi_word_ents)
@@ -317,14 +317,14 @@ def fuzzy_matching_gensim(sentences, single_word, multi_word, matched, amb, accu
                     if sl == [match]:
                         matched.remove(sl)
     # match each entity with the most similar other entities
-    '''for sl in matched:
+    for sl in matched:
         add = []
         for x in sl:
             for m in model1.wv.most_similar(x):
                 if (m[0] in single_word or m[0] in multi_word) and m[0] not in sl:
                     if m[1] > accuracy:
                         add.append(m[0])
-        sl.extend(add)'''
+        sl.extend(add)
 
     # remove duplicate lists
     for idx, sublist in enumerate(matched):
@@ -335,10 +335,53 @@ def fuzzy_matching_gensim(sentences, single_word, multi_word, matched, amb, accu
     matched1 = list(matched for matched, _ in itertools.groupby(matched))
     return matched1
 
+    # gensim word embedding model
+    data = []
+    for i in sentences:
+        i = i.replace('-', ' ')
+        temp = []
 
+        # tokenize the sentence into words
+        for j in nltk.word_tokenize(i):
+            temp.append(j)
+
+        data.append(temp)
+
+    model1 = gensim.models.Word2Vec(data, min_count=2, iter=10,
+                                    size=100, window=5, sg=1)
+    # match ambiguos entites with most similar ones
+    for ind, m in amb.items():
+        matches = {}
+        for x in m:
+            if model1.wv.similarity(x, ind) > accuracy:
+                matches[x] = model1.wv.similarity(x, ind)
+        if len(matches) > 0:
+            match = max(matches.items(), key=operator.itemgetter(1))[0]
+            for sl in matched:
+                if ind in sl:
+                    sl.append(match)
+                    if sl == [match]:
+                        matched.remove(sl)
+    # match each entity with the most similar other entities
+    for sl in matched:
+        add = []
+        for x in sl:
+            for m in model1.wv.most_similar(x):
+                if (m[0] in single_word or m[0] in multi_word) and m[0] not in sl:
+                    if m[1] > accuracy:
+                        add.append(m[0])
+        sl.extend(add)
+
+    # remove duplicate lists
+    for idx, sublist in enumerate(matched):
+        temp = list(dict.fromkeys(sublist))
+        temp.sort()
+        matched[idx] = temp
+    matched.sort()
+    matched1 = list(matched for matched, _ in itertools.groupby(matched))
+    return matched1
 # match single words that are matched to multiple multi word entities to the most frequent one
-def frequency_matching(amb, matched, accuracy):
-    global entity_frequency
+def frequency_matching(amb, matched, entity_frequency, accuracy):
     for ind, m in amb.items():
         freq = accuracy
         match = ''
@@ -424,4 +467,4 @@ def sort_sentences_to_matched_entities(common_sentences, matched):
                 keys = keys + (item2,)
         sentences_matched[keys] = common_sentences[item]
 
-    return sentences_matched
+    return sentences_matched'''
