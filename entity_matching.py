@@ -277,7 +277,7 @@ def sort_sentences_to_matched_entities(common_sentences, matched):
         item = sublist[0]
         for item2 in sublist:
             if item != item2:
-                common_sentences[item].extend(common_sentences[item2])
+                common_sentences[item].update(common_sentences[item2])
             if item2 not in keys:
                 keys = keys + (item2,)
         sentences_matched[keys] = common_sentences[item]

@@ -1,0 +1,35 @@
+single word entities matched against multi word entities
+multiple mentions:
+george weasley: george, weasley
+harry potter: harry, potter (mr. potter)
+
+{'Dumbledore': Counter({'Albus_Dumbledore': 7}),
+ 'Dursley': Counter({'Mr._Dursley': 20}),
+ 'Flamel': Counter({'Nicolas_Flamel': 12}),
+ 'George': Counter({'George_Weasley': 8}),
+ 'Harry': Counter({'Harry_Potter': 15}),
+ 'Hermione': Counter({'Hermione_Granger': 16}),
+ 'Malfoy': Counter({'Draco_Malfoy': 9}),
+ 'McGonagall': Counter({'Professor_McGonagall': 9}),
+ 'Potter': Counter({'Harry_Potter': 15, 'Mr._Potter': 8}),
+ 'Quirrell': Counter({'Professor_Quirrell': 9}),
+ 'Stone': Counter({"Sorcerer's_Stone": 10}),
+ 'Vernon': Counter({'Uncle_Vernon': 106}),
+ 'Weasley': Counter({'George_Weasley': 8})}
+
+
+transitive result:
+[Counter({'Mr._Dursley': 9260, 'Dursley': 463}),
+ Counter({'Harry_Potter': 306120,
+          'Harry': 19615,
+          'Mr._Potter': 6344,
+          'Potter': 793}),
+ Counter({'Albus_Dumbledore': 7791, 'Dumbledore': 1113}),
+ Counter({'Professor_McGonagall': 7749, 'McGonagall': 861}),
+ Counter({'Uncle_Vernon': 79500, 'Vernon': 750}),
+ Counter({'Professor_Quirrell': 8649, 'Quirrell': 961}),
+ Counter({'George_Weasley': 2880, 'Weasley': 197, 'George': 163}),
+ Counter({'Hermione_Granger': 68016, 'Hermione': 4251}),
+ Counter({'Draco_Malfoy': 9999, 'Malfoy': 1111}),
+ Counter({'Nicolas_Flamel': 1884, 'Flamel': 157}),
+ Counter({"Sorcerer's_Stone": 4190, 'Stone': 419})]
