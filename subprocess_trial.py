@@ -1,5 +1,10 @@
 import subprocess
-import time
+from collections import Counter
+
+import pandas as pd
+import networkx as nx
+import matplotlib.pyplot as plt
+import pprint as pp
 
 proc = subprocess.Popen(['java', '-jar', '.\\minie-0.0.1-SNAPSHOT.jar'],
                         stdin=subprocess.PIPE,
@@ -19,7 +24,7 @@ text =["Mr. Ollivander had come so close that he and Harry were almost nose to n
 "The pile of tried wands was mounting higher and higher on the spindly chair, but the more wands Mr. Ollivander pulled from the shelves, the happier he seemed to become.",
 "Hagrid whooped and clapped and Mr. Ollivander cried, \"Oh, bravo!",
 "He paid seven gold Galleons for his wand, and Mr. Ollivander bowed them from his shop."]
-
+entity = 'Ollivander'
 relations=[]
 for x in text:
     proc.stdin.write((x+'\n').encode())
@@ -34,7 +39,7 @@ for x in text:
             break
         result = line.decode()
         split= result.split(';')
-        split[0].replace('(', '')
+        split[0] = split[0].replace('(', '')
         if len(split) == 3:
             second_split = split[2].split(')')
             second_split[0].replace(')', '')
@@ -45,8 +50,34 @@ for x in text:
             entry = [split[0], second_split[0]]
         relations.append(entry)
         line = proc.stdout.readline()
+proc.terminate()
 
-print(relations)
+relations_entity = [x for x in relations if x[0] == entity]
+
+c = Counter(map(tuple,relations_entity))
+
+relations_df = pd.DataFrame(relations_entity)
+
+g = nx.Graph()
+
+for id, x in relations_df.iterrows():
+    if x[2] is not None:
+        g.add_edge(x[0],x[2],color='g',weight=c[tuple(x)]*2, relation=x[1])
+    else:
+        x1 = [x[0],x[1]]
+        g.add_edge(x[0],x[1],color='b',weight=c[tuple(x1)]*2, relation='')
+
+pos = nx.circular_layout(g, scale=2)
+pos[entity] = [0,0]
+edges = g.edges()
+colors = [g[u][v]['color'] for u,v in edges]
+weights = [g[u][v]['weight'] for u,v in edges]
+edge_labels = nx.get_edge_attributes(g,'relation')
+plt.figure(figsize =(20,10))
+nx.draw(g, pos, edges=edges, edge_color=colors, width=weights, with_labels=True,node_size=5000, font_size=12)
+nx.draw_networkx_edge_labels(g, pos, edge_labels = edge_labels)
+plt.show()
+
 '''
 print('writing')
 proc.stdin.write(b'Harry is stupid\n')
