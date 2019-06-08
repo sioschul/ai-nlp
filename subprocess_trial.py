@@ -7,9 +7,9 @@ import matplotlib.pyplot as plt
 import pprint as pp
 
 proc = subprocess.Popen(['java', '-jar', '.\\minie-0.0.1-SNAPSHOT.jar'],
-                        stdin=subprocess.PIPE,
-                        stdout=subprocess.PIPE,
-                        stderr=subprocess.PIPE)
+                           stdin=subprocess.PIPE,
+                           stdout=subprocess.PIPE,
+                           stderr=subprocess.PIPE)
 text =["Mr. Ollivander had come so close that he and Harry were almost nose to nose.",
 "\"And that's where...\"",
 "Mr. Ollivander touched the lightning scar on Harry's forehead with a long, white finger.",
@@ -74,7 +74,7 @@ colors = [g[u][v]['color'] for u,v in edges]
 weights = [g[u][v]['weight'] for u,v in edges]
 edge_labels = nx.get_edge_attributes(g,'relation')
 plt.figure(figsize =(20,10))
-nx.draw(g, pos, edges=edges, edge_color=colors, width=weights, with_labels=True,node_size=5000, font_size=12)
+nx.draw(g, pos, edges=edges, edge_color=colors, width=weights, with_labels=True,node_size=4000, font_size=12)
 nx.draw_networkx_edge_labels(g, pos, edge_labels = edge_labels)
 plt.show()
 

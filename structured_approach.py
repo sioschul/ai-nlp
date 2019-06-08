@@ -1,7 +1,7 @@
 import codecs
 import pprint as pp
 import re
-import subprocess
+import minie_process as mp
 
 import functions as fn
 import entity_matching as em
@@ -38,26 +38,20 @@ fuzzy_sentences = em.fuzzy_entity_matching(amb, matched, sentences, entity_frequ
                                            accuracy_frequency=6, accuracy_lookaround=3)
 new_common_sentences = em.sort_sentences_to_matched_entities(fuzzy_sentences, matched)
 # replace different entity names in the sentences by the longest matched entity name
-for i,x in new_common_sentences.items():
+'''for i,x in new_common_sentences.items():
     longest_name= max(i,key=len)
     for k, v in x.items():
         for name in i:
-            x[k] = v.replace(name, longest_name)
+            if name != longest_name:
+                x[k] = v.replace(name, longest_name)'''
 # line we are currently
-current_line = 'Harry could see Draco Malfoy banging his goblet on the table.'
-current_entity = 'Ollivander'
+current_line = 'The clanging and crashing were enough to wake the whole castle.'
+current_entity = 'Professor_McGonagall'
 # get the sentences about the current entity that have been read so far
 # @param: line we are currently in, entity name we want to summarize, sentences sorted by entitiies, all sentences
 # @return: list of sentences that can be used for summary without spoilers
-summary_sentences = fn.get_sentences_for_summary(current_line, current_entity, new_common_sentences, sentences)
-proc = subprocess.Popen(['java', '-jar', '.\\minie-0.0.1-SNAPSHOT.jar'],
-                        stdin=subprocess.PIPE,
-                        stdout=subprocess.PIPE,
-                        stderr=subprocess.PIPE)
-print('hi')
-proc.stdin.write(b'do you work\n')
-proc.stdin.flush()
-print(proc.stdout.readline())
+summary_sentences, target_tuple = fn.get_sentences_for_summary(current_line, current_entity, new_common_sentences, sentences)
+mp.minie_processing(summary_sentences, current_entity, target_tuple)
 '''with open('minie1.txt','w+', newline='') as f:
     f.write("\n".join(summary_sentences))
 with open('minie1.txt','r+') as file:
