@@ -155,6 +155,7 @@ def divide_into_single_and_multi_word(single_tokens):
     return single_word_ents, multi_word_ents
 
 def get_sentences_for_summary(current_line, current_entity, sentences_by_ent, sentences):
+    target_tuple = ()
     current_line = current_line.replace('-', ' ')
     current_line = current_line.strip()
     current_line = re.sub('\s+', ' ', current_line)
@@ -167,7 +168,8 @@ def get_sentences_for_summary(current_line, current_entity, sentences_by_ent, se
     for_summary = []
     for x in sentences_by_ent.keys():
         if current_entity in x:
+            target_tuple = x
             for i, sent in sentences_by_ent[x].items():
                 if i <= current_ind:
                     for_summary.append(sent.strip())
-    return for_summary
+    return for_summary, target_tuple
