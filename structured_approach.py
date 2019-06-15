@@ -46,7 +46,7 @@ new_common_sentences = em.sort_sentences_to_matched_entities(fuzzy_sentences, ma
                 x[k] = v.replace(name, longest_name)'''
 # line we are currently
 current_line = 'The clanging and crashing were enough to wake the whole castle.'
-current_entity = 'Professor_McGonagall'
+current_entity = 'Dumbledore'
 # get the sentences about the current entity that have been read so far
 # @param: line we are currently in, entity name we want to summarize, sentences sorted by entitiies, all sentences
 # @return: list of sentences that can be used for summary without spoilers

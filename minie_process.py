@@ -42,7 +42,6 @@ def minie_processing(text, entity, target_tuple):
 
     relations_df = pd.DataFrame(relations_entity)
     center = max(center_count.keys(), key=(lambda k: center_count[k]))
-    print(center)
     draw_graph(relations_df, c, center)
     return relations_df
 
@@ -65,4 +64,5 @@ def draw_graph(relations_df, c, center):
     plt.figure(figsize=(50, 25))
     nx.draw(g, pos, edges=edges, edge_color=colors, width=weights, with_labels=True, font_size=10)
     nx.draw_networkx_edge_labels(g, pos, edge_labels=edge_labels, font_size=10)
-    plt.show()
+    filename = center+'.png'
+    plt.savefig(filename, format="PNG")

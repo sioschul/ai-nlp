@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles.css')}}"/>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<title> Demo </title>
+</head>
+<body>
+<div id="wrapper">
+    <span style="display:block" id="Top">Demo</span>
+    <div id="select">
+		<p><label for="point">Select a point in the book (1 - 100%) </label><br><br>
+		<input type="text" id="point" /></p>
+		<input name="submit" type="submit"  id="submit" value="Select" />
+	</div>
+</div>
+<script src="{{url_for('static', filename='select.js')}}"></script>
+</body>
+</html>

@@ -2,85 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0e026d0-a6a5-42f4-9e9b-136eed46ee81" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ambiguity_single_multiwords.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/boto/manage/cmdshell.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/boto/manage/cmdshell.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/boto/manage/task.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/boto/manage/task.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/boto/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/boto/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/botocore/credentials.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/botocore/credentials.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/dateutil/zoneinfo/rebuild.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/dateutil/zoneinfo/rebuild.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/docutils/utils/math/tex2mathml_extern.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/docutils/utils/math/tex2mathml_extern.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/gensim/models/wrappers/dtmmodel.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/gensim/models/wrappers/dtmmodel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/gensim/models/wrappers/ldavowpalwabbit.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/gensim/models/wrappers/ldavowpalwabbit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/gensim/test/test_dtm.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/gensim/test/test_dtm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/gensim/test/test_lda_callback.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/gensim/test/test_lda_callback.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/gensim/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/gensim/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/jsonschema/tests/test_jsonschema_test_suite.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/jsonschema/tests/test_jsonschema_test_suite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/nltk/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/nltk/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/nltk/classify/megam.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/nltk/classify/megam.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/nltk/classify/senna.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/nltk/classify/senna.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/nltk/classify/tadm.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/nltk/classify/tadm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/nltk/classify/weka.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/nltk/classify/weka.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/nltk/downloader.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/nltk/downloader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/nltk/inference/prover9.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/nltk/inference/prover9.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/nltk/internals.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/nltk/internals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/nltk/parse/dependencygraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/nltk/parse/dependencygraph.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/nltk/parse/malt.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/nltk/parse/malt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/nltk/parse/stanford.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/nltk/parse/stanford.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/nltk/sem/boxer.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/nltk/sem/boxer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/nltk/tag/hunpos.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/nltk/tag/hunpos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/nltk/tag/stanford.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/nltk/tag/stanford.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/nltk/tokenize/repp.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/nltk/tokenize/repp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/nltk/tokenize/stanford.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/nltk/tokenize/stanford.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/nltk/tokenize/stanford_segmenter.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/nltk/tokenize/stanford_segmenter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/nltk/translate/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/nltk/translate/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/nltk/tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/nltk/tree.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/_shell_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/_shell_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/ccompiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/ccompiler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/command/build_ext.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/command/build_ext.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/command/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/command/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/cpuinfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/cpuinfo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/exec_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/exec_command.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/fcompiler/gnu.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/fcompiler/gnu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/fcompiler/ibm.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/fcompiler/ibm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/lib2def.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/lib2def.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/mingw32ccompiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/mingw32ccompiler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/misc_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/misc_util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/system_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/system_info.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/tests/test_shell_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/tests/test_shell_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/tests/test_system_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/distutils/tests/test_system_info.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/f2py/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/f2py/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/f2py/tests/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/f2py/tests/util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/lib/tests/test_format.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/lib/tests/test_format.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/linalg/tests/test_build.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/linalg/tests/test_build.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/linalg/tests/test_linalg.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/linalg/tests/test_linalg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/numpy/tests/test_scripts.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/numpy/tests/test_scripts.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/commands/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/commands/configuration.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/utils/misc.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/utils/misc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/index.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distro.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distro.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/pep517/check.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/pep517/check.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/pep517/envbuild.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/pep517/envbuild.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/pep517/wrappers.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/pep517/wrappers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/scipy/_lib/tests/test_import_cycles.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/scipy/_lib/tests/test_import_cycles.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/scipy/fftpack/tests/gen_fftw_ref.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/scipy/fftpack/tests/gen_fftw_ref.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/scipy/linalg/tests/test_build.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/scipy/linalg/tests/test_build.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/scipy/linalg/tests/test_lapack.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/scipy/linalg/tests/test_lapack.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/scipy/sparse/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/scipy/sparse/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/scipy/special/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/scipy/special/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/easy_install.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/easy_install.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/sklearn/externals/joblib/externals/loky/backend/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/sklearn/externals/joblib/externals/loky/backend/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/sklearn/externals/joblib/testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/sklearn/externals/joblib/testing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/smart_open/hdfs.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/smart_open/hdfs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/smart_open/tests/test_hdfs.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/smart_open/tests/test_hdfs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/spacy/cli/download.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/spacy/cli/download.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/spacy/compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/spacy/compat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/srsly/tests/cloudpickle/testutils.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/srsly/tests/cloudpickle/testutils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/tqdm/_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/tqdm/_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minie_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/minie_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/HP_PROPN_mostcommon.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/Hermione.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/Hermione_word_cloud.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/ambigous_words_frequency.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/ambiguity_single_multiwords.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/disambiguation.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/entites_HP1_wikimodel.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/entities_HP1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/first_name_vs_single_word_matching.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/mostcommon_HP1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/nlp-nltk-1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/nlp-spacy-1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/nlp-spacy-2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/nlp-spacy-3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/nlp-spacy-proprn.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/nlp-spacy-wiki.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/properNouns.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/result_so_far.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/single_word_matching.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/spacy-propn-aggregation-matching.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/spacy-wiki-aggregation-matching.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/spacy-wiki-aggregation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/spacy-wiki-matching-difflib.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/subprocess_trial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old/word_cloud.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/structured_approach.py" beforeDir="false" afterPath="$PROJECT_DIR$/structured_approach.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subprocess_trial.py" beforeDir="false" afterPath="$PROJECT_DIR$/subprocess_trial.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,38 +47,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/flask_app.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/starting_page.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="52" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/minie_process.py">
+        <entry file="file://$PROJECT_DIR$/templates/select_point.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="43" column="70" lean-forward="true" selection-start-line="43" selection-start-column="70" selection-end-line="43" selection-end-column="70" />
+            <state relative-caret-position="204">
+              <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
               <folding>
-                <element signature="e#0#17#0" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/structured_approach.py">
+        <entry file="file://$PROJECT_DIR$/static/select.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="48" column="28" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="34">
+              <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functions.py">
+        <entry file="file://$PROJECT_DIR$/static/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="174" column="36" selection-start-line="174" selection-start-column="36" selection-end-line="174" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="287">
+              <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -163,10 +135,10 @@
       <find>mr</find>
       <find>he',</find>
       <find>more</find>
-      <find>minie_process</find>
       <find>Professor</find>
       <find>trouble</find>
       <find>shock</find>
+      <find>minie_process</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;</replace>
@@ -198,16 +170,27 @@
         <option value="$PROJECT_DIR$/subprocess_trial.py" />
         <option value="$PROJECT_DIR$/env/Lib/site-packages/plac_ext.py" />
         <option value="$PROJECT_DIR$/functions.py" />
-        <option value="$PROJECT_DIR$/structured_approach.py" />
         <option value="$PROJECT_DIR$/minie_process.py" />
+        <option value="$PROJECT_DIR$/structured_approach.py" />
+        <option value="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/utils/misc.py" />
+        <option value="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/util.py" />
+        <option value="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/pep517/wrappers.py" />
+        <option value="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/commands/configuration.py" />
+        <option value="$USER_HOME$/workspaceAI/RobotMaster_finished/src/server/startpage.pt" />
+        <option value="$PROJECT_DIR$/templates/static/styles.css" />
+        <option value="$PROJECT_DIR$/templates/starting_page.html" />
+        <option value="$PROJECT_DIR$/flask_app.py" />
+        <option value="$PROJECT_DIR$/static/startpage.js" />
+        <option value="$PROJECT_DIR$/static/select.js" />
+        <option value="$PROJECT_DIR$/static/styles.css" />
+        <option value="$PROJECT_DIR$/templates/select_point.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1939" />
-    <option name="height" value="1049" />
+    <option name="x" value="10" />
+    <option name="width" value="1940" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -217,6 +200,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -224,11 +208,20 @@
               <item name="ai-nlp" type="b2602c69:ProjectViewProjectNode" />
               <item name="ai-nlp" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ai-nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ai-nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ai-nlp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ai-nlp" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -240,8 +233,8 @@
       <recent name="C:\Users\Acer\Documents\GitHub\ai-nlp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Acer\Documents\GitHub\ai-nlp\old" />
       <recent name="C:\Users\Acer\Documents\GitHub\ai-nlp" />
+      <recent name="C:\Users\Acer\Documents\GitHub\ai-nlp\old" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -256,7 +249,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.structured_approach">
+  <component name="RunManager" selected="Python.flask_app">
     <configuration name="entity_matching" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ai-nlp" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -278,6 +271,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="flask_app" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ai-nlp" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask_app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="spacy-propn-aggregation-matching" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ai-nlp" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -291,27 +305,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="C:\Users\Acer\Documents\GitHub\ai-nlp\old\spacy-propn-aggregation-matching.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="spacy-wiki-aggregation-matching" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ai-nlp" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Acer\Documents\GitHub\ai-nlp\old\spacy-wiki-aggregation-matching.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -353,7 +346,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/subprocess_trial.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Acer\Documents\GitHub\ai-nlp\old\subprocess_trial.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -364,11 +357,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.flask_app" />
         <item itemvalue="Python.structured_approach" />
         <item itemvalue="Python.subprocess_trial" />
         <item itemvalue="Python.entity_matching" />
         <item itemvalue="Python.spacy-propn-aggregation-matching" />
-        <item itemvalue="Python.spacy-wiki-aggregation-matching" />
       </list>
     </recent_temporary>
   </component>
@@ -396,14 +389,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
@@ -476,71 +470,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/nlp.py" />
-    <entry file="file://$PROJECT_DIR$/old/entites_HP1_wikimodel.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="1032" column="17" selection-start-line="1032" selection-start-column="11" selection-end-line="1032" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old/nlp-spacy-2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old/nlp-spacy-3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old/nlp-spacy-wiki.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old/nlp-spacy-proprn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old/nlp-spacy-1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Harry_Potter_and_the_Deathly.txt" />
-    <entry file="file://$PROJECT_DIR$/spacy-wiki-aggregation.py" />
-    <entry file="file://$PROJECT_DIR$/old/spacy-wiki-matching-difflib.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="61" column="37" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/old/nlp-nltk-1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -551,13 +480,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Hermione.txt">
+    <entry file="file://$PROJECT_DIR$/old/Hermione.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Hermione_word_cloud.png">
+    <entry file="file://$PROJECT_DIR$/old/Hermione_word_cloud.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/word_cloud.py">
+    <entry file="file://$PROJECT_DIR$/old/word_cloud.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
@@ -631,7 +560,7 @@
         <state relative-caret-position="-918" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/christmas_carol.txt">
+    <entry file="file://$PROJECT_DIR$/old/christmas_carol.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Harry_Potter_and_the_Chamber.txt">
@@ -649,53 +578,43 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chamber_small.txt" />
-    <entry file="file://$PROJECT_DIR$/chamber_piece.txt">
+    <entry file="file://$PROJECT_DIR$/old/chamber_piece.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="32" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/3_musketeers.txt">
+    <entry file="file://$PROJECT_DIR$/old/3_musketeers.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_minie-master.zip/minie-master/src/main/java/de/uni_mannheim/minie/MinIE.java" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_minie-master.zip/minie-master/src/main/java/tests/minie/Demo.java" />
-    <entry file="file://$PROJECT_DIR$/got_ger.txt">
+    <entry file="file://$PROJECT_DIR$/old/got_ger.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/single_word_matching.py">
+    <entry file="file://$PROJECT_DIR$/old/single_word_matching.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="14" selection-start-column="7" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/minie1.txt">
+    <entry file="file://$PROJECT_DIR$/old/minie1.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/minie.txt">
+    <entry file="file://$PROJECT_DIR$/old/minie.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/entity_matching.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
-          <caret line="264" column="49" selection-start-line="264" selection-start-column="49" selection-end-line="264" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/subprocess_trial.py">
+    <entry file="file://$PROJECT_DIR$/old/subprocess_trial.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="239">
           <caret line="58" column="45" selection-start-line="58" selection-start-column="45" selection-end-line="58" selection-end-column="45" />
@@ -712,19 +631,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="174" column="36" selection-start-line="174" selection-start-column="36" selection-end-line="174" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Figure_1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Figure_1.png" />
     <entry file="file://$PROJECT_DIR$/Harry_Potter_and_the_Sorcerer.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -732,9 +639,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="174" column="36" selection-start-line="174" selection-start-column="36" selection-end-line="174" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/McGonagall.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity_matching.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="264" column="49" selection-start-line="264" selection-start-column="49" selection-end-line="264" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ron.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dumbledore.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/structured_approach.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
+        <state relative-caret-position="647">
           <caret line="48" column="28" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
@@ -744,10 +680,127 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/minie_process.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="43" column="70" lean-forward="true" selection-start-line="43" selection-start-column="70" selection-end-line="43" selection-end-column="70" />
+        <state relative-caret-position="-99">
+          <caret line="43" column="70" selection-start-line="43" selection-start-column="70" selection-end-line="43" selection-end-column="70" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/utils/misc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12354">
+          <caret line="729" column="32" selection-start-line="729" selection-start-column="32" selection-end-line="729" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/commands/configuration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="211" column="28" selection-start-line="211" selection-start-column="28" selection-end-line="211" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/pep517/wrappers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29277">
+          <caret line="1737" column="52" selection-start-line="1737" selection-start-column="52" selection-end-line="1737" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspaceAI/RobotMaster_finished/src/server/startpage.pt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="7" lean-forward="true" selection-end-line="25" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspaceAI/RobotMaster_finished/src/server/startgame.pt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspaceAI/RobotMaster_finished/src/server/static/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="50" selection-start-line="50" selection-end-line="55" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/jinja2/lexer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="383" selection-start-line="383" selection-end-line="383" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspaceAI/RobotMaster_finished/src/server/static/startpage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="32" lean-forward="true" selection-start-column="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flask_app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/starting_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="52" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/startpage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="26" lean-forward="true" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/select.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/select_point.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

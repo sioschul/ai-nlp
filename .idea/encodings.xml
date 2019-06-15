@@ -2,8 +2,8 @@
 <project version="4">
   <component name="Encoding" addBOMForNewFiles="with NO BOM">
     <file url="file://$PROJECT_DIR$/Harry_Potter_and_the_Chamber.txt" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/christmas_carol.txt" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/got_ger.txt" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/old/christmas_carol.txt" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/old/got_ger.txt" charset="windows-1252" />
     <file url="PROJECT" charset="windows-1252" />
   </component>
 </project>

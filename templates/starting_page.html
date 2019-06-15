@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles.css')}}"/>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<title> Demo </title>
+</head>
+<body>
+<div id="wrapper">
+	<span style="display:block" id="Top">Demo</span>
+	<div id="books">
+        <p>
+            <button type="button" class="button" onclick="load_book(1)">Harry Potter and the Sorcerer Stone</button>
+            <button type="button" class="button" onclick="load_book(2)">Harry Potter and the Chamber of Secrets</button>
+        </p>
+        <p>
+            <button type="button" class="button" onclick="load_book(3)">Harry Potter and the Prisoner of Azkaban</button>
+            <button type="button" class="button" onclick="load_book(4)">Harry Potter and the Order of the Phoenix</button>
+        </p>
+    </div>
+</div>
+<script src="{{url_for('static', filename='startpage.js')}}"></script>
+</body>
+</html>
