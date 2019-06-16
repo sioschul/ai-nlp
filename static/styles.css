@@ -24,6 +24,13 @@
 	font: bold 20px arial sans-serif;
 	height: 43px;
 	width: 420px;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+}
+
+.button:hover{
+    background-color: #3F6BF5;
+    color: white;
 }
 
 #books{
@@ -49,4 +56,10 @@
 	color: black;
 	border: 1px solid #0F2D8B;
 	font: 18px arial sans-serif;
+}
+
+#display{
+    font: 20px arial sans-serif;
+    text-align: center;
+    padding: 40px 10px;
 }

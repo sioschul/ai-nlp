@@ -1,15 +1,10 @@
-import codecs
-import pprint as pp
-import re
 import minie_process as mp
-
 import functions as fn
 import entity_matching as em
-
 # language of the book
 language = 'en'
 # read and tokenize books
-sentences = fn.read_and_tokenize("Harry_Potter_and_the_Sorcerer.txt")
+sentences = fn.read_and_tokenize("Harry_Potter_and_the_Chamber.txt")
 
 # extract entities
 # @param: sentences, language and optional min_coccurrence to consider
@@ -45,13 +40,13 @@ new_common_sentences = em.sort_sentences_to_matched_entities(fuzzy_sentences, ma
             if name != longest_name:
                 x[k] = v.replace(name, longest_name)'''
 # line we are currently
-current_line = 'The clanging and crashing were enough to wake the whole castle.'
+current_line = 'Dumbledore came in, looking very somber.'
 current_entity = 'Dumbledore'
 # get the sentences about the current entity that have been read so far
 # @param: line we are currently in, entity name we want to summarize, sentences sorted by entitiies, all sentences
 # @return: list of sentences that can be used for summary without spoilers
 summary_sentences, target_tuple = fn.get_sentences_for_summary(current_line, current_entity, new_common_sentences, sentences)
-mp.minie_processing(summary_sentences, current_entity, target_tuple)
+mp.minie_processing(summary_sentences, target_tuple)
 '''with open('minie1.txt','w+', newline='') as f:
     f.write("\n".join(summary_sentences))
 with open('minie1.txt','r+') as file:
