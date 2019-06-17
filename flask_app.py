@@ -12,6 +12,10 @@ sentences_to_display =[]
 # routes for GET requests rendering pages
 @app.route('/')
 def starting_page():
+    global sentences, new_common_sentences, sentences_to_display
+    sentences = []
+    new_common_sentences = {}
+    sentences_to_display = []
     return render_template('starting_page.html')
 
 @app.route('/select')
@@ -72,6 +76,26 @@ def point_book(point):
         if lower <= ind <= upper:
             sentences_to_display.append(sen)
     return '1'
+
+# get the selected sentences to display
+@app.route('/load-display-text')
+def load_display_text():
+    sent = ''
+    for x in sentences_to_display:
+        sent = sent + x.replace('\n',' ') + '+;'
+    return sent
+
+# get the entities found in book to display
+@app.route('/load-entities')
+def load_entities():
+    global new_common_sentences
+    keys = new_common_sentences.keys()
+    sent = ''
+    for x in keys:
+        for y in x:
+            name = y.replace('_',' ')
+            sent = sent + name + ','
+    return sent
 
 if __name__ == '__main__':
     app.run('localhost', 5000, debug=True)

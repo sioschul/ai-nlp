@@ -47,6 +47,12 @@
     font: 25px arial sans-serif;
 }
 
+#explanation{
+    font: 25px arial sans-serif;
+    color: #0F2D8B;
+    text-align:center;
+}
+
 #submit{
 	background: #CAE6FC;
 	text-align: center;
@@ -61,5 +67,11 @@
 #display{
     font: 20px arial sans-serif;
     text-align: center;
-    padding: 40px 10px;
+    line-height: 1.5;
+    padding: 20px 10px;
+}
+
+.entity{
+    font: bold 20px arial sans-serif;
+    color: #0F2D8B;
 }
