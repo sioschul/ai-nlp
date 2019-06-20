@@ -1,3 +1,4 @@
+# this is supposed to show how the chronological calls to the different functions are intended to use
 import minie_process as mp
 import functions as fn
 import entity_matching as em

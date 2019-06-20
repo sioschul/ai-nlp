@@ -75,3 +75,8 @@
     font: bold 20px arial sans-serif;
     color: #0F2D8B;
 }
+
+img{
+  max-width: 100%;
+  height: auto;
+}

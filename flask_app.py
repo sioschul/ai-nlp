@@ -1,13 +1,13 @@
 from flask import Flask, render_template
 import minie_process as mp
 import functions as fn
-import entity_matching as em
 
 app = Flask(__name__)
 language = 'en'
 sentences = []
 new_common_sentences={}
 sentences_to_display =[]
+
 
 # routes for GET requests rendering pages
 @app.route('/')
@@ -25,6 +25,10 @@ def point_in_book():
 @app.route('/display')
 def display_sentences():
     return render_template('display_book.html')
+
+@app.route('/graph')
+def display_graph():
+    return render_template('display_graph.html')
 
 #load the selected book from prepared files
 @app.route('/load-book/<number>', methods=['GET', 'POST'])
@@ -82,7 +86,7 @@ def point_book(point):
 def load_display_text():
     sent = ''
     for x in sentences_to_display:
-        sent = sent + x.replace('\n',' ') + '+;'
+        sent = sent + x.replace('\n', ' ') + '+;'
     return sent
 
 # get the entities found in book to display
@@ -93,9 +97,19 @@ def load_entities():
     sent = ''
     for x in keys:
         for y in x:
-            name = y.replace('_',' ')
-            sent = sent + name + ','
+            sent = sent + y + ','
     return sent
+
+# generate the minie output graph given a entity and the point in the book/sentences regarding this entity
+@app.route('/generate-graph/<entity>/<sentence>')
+def generate_graph(entity, sentence):
+    global new_common_sentences, sentences
+    current_entity = '%s' % entity
+    current_line = '%s' % sentence
+    summary_sentences, target_tuple = fn.get_sentences_for_summary(current_line, current_entity, new_common_sentences, sentences)
+    # save the picture locally, as '/graphs/' + center + '.png'
+    df, path = mp.minie_processing(summary_sentences, target_tuple)
+    return path
 
 if __name__ == '__main__':
     app.run('localhost', 5000, debug=True)

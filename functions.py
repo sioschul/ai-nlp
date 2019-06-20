@@ -162,9 +162,13 @@ def get_sentences_for_summary(current_line, current_entity, sentences_by_ent, se
     current_ind = 0
     for ind, s in enumerate(sentences):
         s = s.replace('_', ' ')
+        s = s.replace('-', ' ')
+        s = s.strip()
+        s = re.sub('\s+', ' ',s)
         if s == current_line:
             current_ind = ind
             break
+    current_entity = current_entity.replace(' ', '_')
     for_summary = []
     for x in sentences_by_ent.keys():
         if current_entity in x:
