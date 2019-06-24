@@ -1,6 +1,8 @@
 from flask import Flask, render_template
 import minie_process as mp
 import functions as fn
+import entity_matching as em
+from nltk import sent_tokenize
 
 app = Flask(__name__)
 language = 'en'
@@ -61,6 +63,23 @@ def load_book(number):
         return '1'
     else:
         return '-1'
+
+# process users text
+@app.route('/owntext/<text>',methods=['GET', 'POST'])
+def process_owntext(text):
+    global sentences, new_common_sentences, sentences_to_display, language
+    input_text = '%s' % text
+    sentences = sent_tokenize(input_text)
+    single_tokens, common_sentences, entity_frequency, cooc = fn.entity_extraction(sentences, language, 0)
+    single_word_ents, multi_word_ents = fn.divide_into_single_and_multi_word(single_tokens)
+    matched, amb = em.non_fuzzy_entity_matching(single_word_ents, multi_word_ents, language)
+    fuzzy_sentences = em.fuzzy_entity_matching(amb, matched, sentences, entity_frequency, common_sentences, cooc,
+                                               single_word_ents, multi_word_ents, accuracy_gensim=0.4,
+                                               accuracy_frequency=2, accuracy_lookaround=1)
+    new_common_sentences = em.sort_sentences_to_matched_entities(fuzzy_sentences, matched)
+    sentences_to_display = sentences
+    return '1'
+
 
 # find sentences around a given percentage of the book
 @app.route('/point-book/<point>', methods=['GET', 'POST'])

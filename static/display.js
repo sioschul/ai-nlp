@@ -19,6 +19,7 @@ $(document).ready(function(){
 		 	datatype: "text",
 		 	success: function(data){
 		 	    var keys = data.split(',');
+		 	    console.log(keys)
 		 	    // change all entities to spans which trigger get_picture on click
 		 	    for (var i = 0; i < sentences.length; i++){
 		 	        var sentence = sentences[i].split(' ');

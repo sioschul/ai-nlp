@@ -37,7 +37,7 @@
     text-align:center;
 }
 
-#select{
+#select, #textfield{
     font: bold 20px arial sans-serif;
 	text-align: center;
 }
@@ -53,7 +53,7 @@
     text-align:center;
 }
 
-#submit{
+#submit1, #submit2{
 	background: #CAE6FC;
 	text-align: center;
 	padding: 10px 22px;
@@ -79,4 +79,14 @@
 img{
   max-width: 100%;
   height: auto;
+}
+
+#owntext{
+    width: 75%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: left;
+    height: 200px;
+    resize: none;
 }

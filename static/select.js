@@ -1,10 +1,10 @@
 $("#point").on("keyup", function(event) {
   if (event.keyCode === 13) {
    event.preventDefault();
-   $("#submit").click();
+   $("#submit2").click();
   }
 });
-$("#submit").click(function(){
+$("#submit2").click(function(){
      var point = $('#point').val();
      if(point==''){
         alert('Insert a value between 1 and 100!')

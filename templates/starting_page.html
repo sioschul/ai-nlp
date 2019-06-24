@@ -18,6 +18,12 @@
             <button type="button" class="button" onclick="load_book(4)">Harry Potter and the Order of the Phoenix</button>
         </p>
     </div>
+    <div id="textfield">
+        <p>OR<br></p>
+        <label for="owntext">Enter your own text (only English):</label><br>
+        <textarea id="owntext" maxlength="20000" type="text" placeholder="Write your text here..."></textarea><br>
+        <input name="submit" type="submit"  id="submit1" value="Continue" />
+    </div>
 </div>
 <script src="{{url_for('static', filename='startpage.js')}}"></script>
 </body>
