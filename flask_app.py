@@ -131,4 +131,4 @@ def generate_graph(entity, sentence):
     return path
 
 if __name__ == '__main__':
-    app.run('localhost', 5000, debug=True)
+    app.run('0.0.0.0')

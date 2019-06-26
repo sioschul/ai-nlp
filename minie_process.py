@@ -39,6 +39,9 @@ def minie_processing(text, target_tuple):
             relations.append(entry)
             line = proc.stdout.readline()
     proc.terminate()
+    # check if empty
+    if not relations:
+        return '-1', 'None.png'
     # reduce to relations concering our current entity
     relations_entity = [x for x in relations if any(s in x for s in target_tuple)]
     # choose the entityname with most relations as center
