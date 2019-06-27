@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0e026d0-a6a5-42f4-9e9b-136eed46ee81" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity_matching.py" beforeDir="false" afterPath="$PROJECT_DIR$/entity_matching.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minie_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/minie_process.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/graph.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Dudley.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Filch.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Harry.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Peeves.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Privet_Drive.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/Uncle_Vernon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/display_book.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/display_book.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/display_graph.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/display_graph.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/select_point.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/select_point.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/starting_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/starting_page.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,22 +15,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="3" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/flask_app.py">
+        <entry file="file://$PROJECT_DIR$/minie_process.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
-              <caret line="133" column="21" selection-start-line="133" selection-start-column="21" selection-end-line="133" selection-end-column="21" />
+            <state relative-caret-position="505">
+              <caret line="77" column="6" selection-start-line="77" selection-start-column="6" selection-end-line="77" selection-end-column="6" />
               <folding>
-                <element signature="e#0#40#0" expanded="true" />
+                <element signature="e#0#17#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -127,18 +108,18 @@
         <option value="$PROJECT_DIR$/static/graphs.js" />
         <option value="$PROJECT_DIR$/static/select.js" />
         <option value="$PROJECT_DIR$/static/styles.css" />
-        <option value="$PROJECT_DIR$/entity_matching.py" />
         <option value="$PROJECT_DIR$/static/startpage.js" />
-        <option value="$PROJECT_DIR$/functions.py" />
         <option value="$PROJECT_DIR$/../../Uni/Arbeiten/AILS2/old/subprocess_trial.py" />
         <option value="$PROJECT_DIR$/static/display.js" />
-        <option value="$PROJECT_DIR$/minie_process.py" />
         <option value="$PROJECT_DIR$/static/graph.js" />
         <option value="$PROJECT_DIR$/templates/display_book.html" />
         <option value="$PROJECT_DIR$/templates/display_graph.html" />
         <option value="$PROJECT_DIR$/templates/select_point.html" />
         <option value="$PROJECT_DIR$/templates/starting_page.html" />
         <option value="$PROJECT_DIR$/flask_app.py" />
+        <option value="$PROJECT_DIR$/entity_matching.py" />
+        <option value="$PROJECT_DIR$/functions.py" />
+        <option value="$PROJECT_DIR$/minie_process.py" />
       </list>
     </option>
   </component>
@@ -161,27 +142,6 @@
             <path>
               <item name="ai-nlp" type="b2602c69:ProjectViewProjectNode" />
               <item name="ai-nlp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ai-nlp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ai-nlp" type="462c0819:PsiDirectoryNode" />
-              <item name="env" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ai-nlp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ai-nlp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ai-nlp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ai-nlp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ai-nlp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ai-nlp" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -597,30 +557,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/entity_matching.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="167" column="18" selection-start-line="167" selection-start-column="12" selection-end-line="167" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/startpage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="177" column="52" selection-start-line="177" selection-start-column="52" selection-end-line="177" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -685,16 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/minie_process.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="43" column="30" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/display.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-340">
@@ -709,15 +639,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../Uni/Arbeiten/AILS2/NLP/flask_app/flask_app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Uni/Arbeiten/AILS2/NLP/flask_app/flask_app.py" />
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -727,10 +649,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/flask_app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="133" column="21" selection-start-line="133" selection-start-column="21" selection-end-line="133" selection-end-column="21" />
+        <state relative-caret-position="437">
+          <caret line="138" column="31" lean-forward="true" selection-start-line="138" selection-start-column="31" selection-end-line="138" selection-end-column="31" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity_matching.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="281" column="66" lean-forward="true" selection-start-line="281" selection-start-column="66" selection-end-line="281" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="179" column="85" selection-start-line="179" selection-start-column="85" selection-end-line="179" selection-end-column="85" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minie_process.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="77" column="6" selection-start-line="77" selection-start-column="6" selection-end-line="77" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
           </folding>
         </state>
       </provider>

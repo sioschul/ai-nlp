@@ -4,16 +4,18 @@ import functions as fn
 import entity_matching as em
 from nltk import sent_tokenize
 
+# create flask app
 app = Flask(__name__)
 language = 'en'
 sentences = []
-new_common_sentences={}
-sentences_to_display =[]
+new_common_sentences = {} # this is a dict with the matched entities as keys (tuples) and all sentences belonging to this entities
+sentences_to_display = []
 
 
 # routes for GET requests rendering pages
 @app.route('/')
 def starting_page():
+    # reset saved sentences
     global sentences, new_common_sentences, sentences_to_display
     sentences = []
     new_common_sentences = {}
@@ -32,10 +34,11 @@ def display_sentences():
 def display_graph():
     return render_template('display_graph.html')
 
-#load the selected book from prepared files
+# load the selected book from prepared files
 @app.route('/load-book/<number>', methods=['GET', 'POST'])
 def load_book(number):
     global sentences, new_common_sentences
+    # number indicates which book was chosen
     book_number = int('%s' % number)
     if book_number == 1:
         sentences = fn.read_and_tokenize("Harry_Potter_and_the_Sorcerer.txt")
@@ -64,18 +67,26 @@ def load_book(number):
     else:
         return '-1'
 
-# process users text
+# process users input text
 @app.route('/owntext/<text>',methods=['GET', 'POST'])
 def process_owntext(text):
     global sentences, new_common_sentences, sentences_to_display, language
     input_text = '%s' % text
+    # split text into sentences
     sentences = sent_tokenize(input_text)
+    # perform entity extraction with spacy
     single_tokens, common_sentences, entity_frequency, cooc = fn.entity_extraction(sentences, language, 0)
+    # split into single and multiword entities
     single_word_ents, multi_word_ents = fn.divide_into_single_and_multi_word(single_tokens)
+    # perform entity matching first based on rules
     matched, amb = em.non_fuzzy_entity_matching(single_word_ents, multi_word_ents, language)
+    # then based on majority vote between gensim word embedding, over all frequency, frequency before and after an occurence
+    # and  using a coocurrence matrix
     fuzzy_sentences = em.fuzzy_entity_matching(amb, matched, sentences, entity_frequency, common_sentences, cooc,
                                                single_word_ents, multi_word_ents, accuracy_gensim=0.4,
                                                accuracy_frequency=2, accuracy_lookaround=1)
+    # then sort all sentences belonging to the same entity together (e.g. {('Harry','Harry_Potter'):all sentences containing
+    # either Harry or Harry Potter}
     new_common_sentences = em.sort_sentences_to_matched_entities(fuzzy_sentences, matched)
     sentences_to_display = sentences
     return '1'
@@ -126,9 +137,11 @@ def generate_graph(entity, sentence):
     current_entity = '%s' % entity
     current_line = '%s' % sentence
     summary_sentences, target_tuple = fn.get_sentences_for_summary(current_line, current_entity, new_common_sentences, sentences)
-    # save the picture locally, as '/graphs/' + center + '.png'
+    # save the picture locally, as center + '.png' where center is the entity of the tuple with the most relations
+    # e.g. ('Harry', 'Harry_Potter') center will be Harry because it occurs more often and has more relations
     df, path = mp.minie_processing(summary_sentences, target_tuple)
     return path
 
+# run app
 if __name__ == '__main__':
     app.run('0.0.0.0')

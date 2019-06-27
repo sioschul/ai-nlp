@@ -63,7 +63,7 @@ def load_stop_words(language):
         spacy_stopwords.add('hey')
     return spacy_stopwords
 
-
+# honorific lists for different languages
 def load_honorifics(language):
     if language == 'en':
         honorifics = ['Master', 'Mr', 'Mr.', 'Mrs', 'Mrs.', 'Miss', 'Ms', 'Ms.', 'Mister', 'Mx', 'Mx.', 'Sir', 'Madam',
@@ -106,7 +106,7 @@ def entity_extraction(sentences, lang, min_occurence=6):
     for i, s in enumerate(sentences):
         entity_sentence = ''
         s = re.sub('\s+', ' ', s)
-        s = s.replace('-',' ')
+        s = s.replace('-', ' ')
         s = s.strip()
         doc = nlp(s)
         names = []
@@ -115,14 +115,16 @@ def entity_extraction(sentences, lang, min_occurence=6):
             # replace whitespace in multi word ents with "_"
             if len(ent.text.split()) > 1:
                 name = ent.text.replace(" ", "_")
+            # remove special characters from entity names
             if not (not name.endswith("!") and not name.endswith("?") and not name.endswith("\'") and not name.endswith(
                     '.') and not name.endswith("\"")) or name.startswith("\""):
                 name = re.sub('[\.\'\!\?\"]$', '', name)
-            # remove whitespaces from ents and remove stopwords from ents
+            # remove whitespaces from entities and remove stopwords from entities
             if name.lower() not in spacy_stopwords and not name.startswith('\'') and not name.startswith(
                     '\"') and name != '':
                 sentences[i] = sentences[i].replace(ent.text, name)
                 names.append(name)
+                # keep track of all entities found in a sentence to use this for cooccurence
                 entity_sentence = entity_sentence + name + ' '
         for name in names:
             # keep all sentences from the same entity together
@@ -130,12 +132,13 @@ def entity_extraction(sentences, lang, min_occurence=6):
             sentences_by_ents.setdefault(name, {})[i] = sentences[i]
             # keep track of entities with their tag
             tokens.append(name)
+        # add all entities in this sentence to a list
         if entity_sentence != '':
             entities_for_cooc.append(entity_sentence)
     # remove unnecessary entries with <6 occurrences4
     c = Counter(tokens)
     common_sentences = {k: sentences_by_ents[k] for k in sentences_by_ents if len(sentences_by_ents[k]) > min_occurence}
-    # reduce to list of names
+    # reduce counter to list of names
     single_tokens = []
     for k in c.keys():
         if k not in single_tokens and k in common_sentences.keys():
@@ -154,13 +157,17 @@ def divide_into_single_and_multi_word(single_tokens):
             single_word_ents.append(i)
     return single_word_ents, multi_word_ents
 
+# provide all sentences belonging to current entity up to current line
 def get_sentences_for_summary(current_line, current_entity, sentences_by_ent, sentences):
     target_tuple = ()
+    # prepare current line
     current_line = current_line.replace('-', ' ')
     current_line = current_line.strip()
     current_line = re.sub('\s+', ' ', current_line)
     current_ind = 0
+    # find the index of the sentecne we are currently in
     for ind, s in enumerate(sentences):
+        # prepare the sentence to match against
         s = s.replace('_', ' ')
         s = s.replace('-', ' ')
         s = s.strip()
@@ -170,6 +177,7 @@ def get_sentences_for_summary(current_line, current_entity, sentences_by_ent, se
             break
     current_entity = current_entity.replace(' ', '_')
     for_summary = []
+    # add all sentences up to ind which belong to the tuple containing current entity
     for x in sentences_by_ent.keys():
         if current_entity in x:
             target_tuple = x

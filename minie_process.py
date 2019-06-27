@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 
 # process with minie using subprocess
 def minie_processing(text, target_tuple):
+    # create subprocess
     proc = subprocess.Popen(['java', '-jar', '.\\minie-0.0.1-SNAPSHOT.jar'],
                             stdin=subprocess.PIPE,
                             stdout=subprocess.PIPE,
@@ -44,12 +45,13 @@ def minie_processing(text, target_tuple):
         return '-1', 'None.png'
     # reduce to relations concering our current entity
     relations_entity = [x for x in relations if any(s in x for s in target_tuple)]
-    # choose the entityname with most relations as center
+    # choose the entity name with most relations as center
     c = Counter(map(tuple, relations_entity))
     center_count=Counter([x[0] for x in relations_entity])
     center = max(center_count.keys(), key=(lambda k: center_count[k]))
     if not any(s in center for s in target_tuple):
         center = target_tuple[0]
+    # convert relations to dataframe and draw the graph
     relations_df = pd.DataFrame(relations_entity)
     draw_graph(relations_df, c, center)
     return relations_df, center+'.png'
@@ -73,7 +75,7 @@ def draw_graph(relations_df, c, center):
     weights = [g[u][v]['weight'] for u, v in edges]
     # add edge labels
     edge_labels = nx.get_edge_attributes(g, 'relation')
-    #draw and save graph
+    # draw and save graph
     plt.figure(figsize=(10,10))
     nx.draw(g, pos, edges=edges, edge_color=colors, width=weights, with_labels=True, font_size=10)
     nx.draw_networkx_edge_labels(g, pos, edge_labels=edge_labels, font_size=10)

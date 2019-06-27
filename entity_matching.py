@@ -11,11 +11,11 @@ import functions as fn
 
 # match entities first certain matching then fuzzy matching
 def non_fuzzy_entity_matching(single_word_ents, multi_word_ents, languaga):
-    # single word ents matched against multi word ents
+    # single word ents matched against multi word entities
     matched_ents = match_single_against_multi_word(single_word_ents, multi_word_ents)
-    # ambiguous multi word ents
+    # ambiguous multi word entities
     ambiguous = find_ambiguous_words(matched_ents)
-    # unambiguous matches and first name matches for ambiguous ones
+    # unambiguous matches and first name matches ('Harry', 'Harry_Potter')
     matched, amb = direct_matching(matched_ents, ambiguous, languaga)
     return matched, amb
 
@@ -23,23 +23,27 @@ def non_fuzzy_entity_matching(single_word_ents, multi_word_ents, languaga):
 # sorts the sentences with ambiguous mentions via majority vote
 def fuzzy_entity_matching(amb, matched, sentences, entity_frequency, common_sentences, cooc, single_ents, multi_ents,
                           accuracy_gensim, accuracy_frequency, accuracy_lookaround):
+    # create coocurence matrix and gensim model
     modelo, X = create_cooccurence(cooc)
     modelg = create_gensim(sentences)
     fuzzy_sentences = copy.deepcopy(common_sentences)
     for ind, x in amb.items():
-        #these don't change for different mentions
+        # these votes don't change for different mentions because the consider all sentences not just the current
         gensim_num = gensim_matching(ind, x, modelg, accuracy_gensim)
         overall = overall_frequency_matching(x, matched, entity_frequency, accuracy_frequency)
         # compute results for all fuzzy matching methods for each ambiguous mention of ind
         for i, s in common_sentences[ind].items():
             decisions = [gensim_num, overall, co_occurence_matching(ind, x, modelo, X, s, single_ents, multi_ents, matched)]
+            # frequency before and after current mention
             before, after = lookaround_frequency_matching(x, sentences, s, accuracy_lookaround)
             decisions.append(before)
             decisions.append(after)
+            # remove empty votes
             decisions = list(filter(lambda a: a != '', decisions))
             vote = ''
             vote_count = Counter(decisions)
-            if vote_count!=Counter():
+            # get majority vote
+            if vote_count != Counter():
                 vote = max(vote_count.items(), key=operator.itemgetter(1))[0]
             # shift sentence according to vote
             # do nothing if not decideable
@@ -50,7 +54,7 @@ def fuzzy_entity_matching(amb, matched, sentences, entity_frequency, common_sent
 
 
 
-# matching all single word ents against fitting multi word ents and add multi word ents with no matching single word
+# matching all single word entities against fitting multi word entities
 def match_single_against_multi_word(single_word_ents, multi_word_ents):
     # match single words against multi words
     matched_ents = {}
@@ -61,7 +65,7 @@ def match_single_against_multi_word(single_word_ents, multi_word_ents):
                 belong_together.append(j)
         if i not in matched_ents.keys():
             matched_ents[i] = belong_together
-    # add remaining multi words
+    # add remaining multi word entities to matched_ents which do not have a single word counterpart
     multi_to_add = []
     for i in multi_word_ents:
         found = False
@@ -118,7 +122,7 @@ def direct_matching(matched_ents, ambigous, language):
                 belong_together.append(m[1])
                 del amb[ind]
         matched.append(belong_together)
-    # now unambiguous entities matched if there is a hind they belong together
+    # now unambiguous entities matched if there is a hind they belong together (start or end in common)
     delete = []
     for ind, m in amb.items():
         if len(m) == 1 and (m[0].startswith(ind) or m[0].endswith(ind) or ind.startswith(m[0]) or ind.endswith(m[0])):
@@ -129,7 +133,7 @@ def direct_matching(matched_ents, ambigous, language):
             delete.append(ind)
     for ind in delete:
         del amb[ind]
-    # add remaining ambiguous entites as distinct entities
+    # add remaining ambiguous entities as distinct entities
     for ind, m in matched_ents.items():
         for entry in m:
             found = False
@@ -139,7 +143,7 @@ def direct_matching(matched_ents, ambigous, language):
                     break
             if not found:
                 matched.append([entry])
-    # transitivity
+    # transitivity [Harry,Harry_Potter] and [Harry_Potter,Mr_Potter] become [Harry, Harry_Potter, Mr_Potter]
     for sl in matched:
         for sl2 in matched:
             if sl != sl2 and not set(sl).isdisjoint(sl2):
@@ -183,7 +187,7 @@ def gensim_matching(ind, x, model, accuracy):
         match = max(matches.items(), key=operator.itemgetter(1))[0]
     return match
 
-
+# count over all frequency of possible matches and decide for the most common one
 def overall_frequency_matching(x, matched, entity_frequency, accuracy):
     freq = accuracy
     matches ={}
@@ -196,17 +200,18 @@ def overall_frequency_matching(x, matched, entity_frequency, accuracy):
                 for j in sl:
                     freq_m += entity_frequency[j]
         if freq_m > freq:
-           matches[m]=freq_m
+           matches[m] = freq_m
     if len(set(matches.values())) == len(matches.values()):
         match = max(matches.items(), key=operator.itemgetter(1))[0]
     return match
 
-
+# check for occurrences of the possible matches around the current sentence and decide for the one which occurs the most
 def lookaround_frequency_matching(x, sentences, current_sentence, accuracy):
     for ind1, se in enumerate(sentences):
         if current_sentence == se:
             count_mentions_before = []
             count_mentions_after = []
+            # find sentences before and after
             for i in range(accuracy):
                 if ind1 + i + 1 < len(sentences):
                     s1 = sentences[ind1 + i + 1]
@@ -216,6 +221,7 @@ def lookaround_frequency_matching(x, sentences, current_sentence, accuracy):
                     s2 = sentences[ind1 - i - 1]
                 else:
                     s2 = ''
+                # check if m (possible match we look at) occurs in the selected sentences
                 for m in x:
                     for word in s1.split(' '):
                         if word == m:
@@ -227,12 +233,14 @@ def lookaround_frequency_matching(x, sentences, current_sentence, accuracy):
             match_a = ''
             count_b = Counter(count_mentions_before)
             count_a = Counter(count_mentions_after)
+            # take the match with the highest frequency
             if count_a != Counter() and len(set(count_a.values())) == len(count_a.values()):
                 match_a = max(count_a.items(), key=operator.itemgetter(1))[0]
             if count_b != Counter() and len(set(count_b.values())) == len(count_b.values()):
                 match_b = max(count_b.items(), key=operator.itemgetter(1))[0]
             return match_b, match_a
 
+# create cooccurrence matrix
 def create_cooccurence(entities):
     count_model = CountVectorizer(ngram_range=(1, 1))  # default unigram model
     X = count_model.fit_transform(entities)
@@ -240,13 +248,14 @@ def create_cooccurence(entities):
 
 def co_occurence_matching(ind, x, model, X, sentence, single_ents, multi_ents,matched):
     Xc = (X.T * X)  # this is co-occurrence matrix in sparse csr format
-    Xc.setdiag(0)  # fill same word cooccurence to 0
+    Xc.setdiag(0)  # fill same word concurrence to 0
     names = model.get_feature_names()
     matrix = Xc.todense()
     matches = {}
     match = ''
     for m in x:
         matches[m] = 0
+    # find entity in matrix, check for all possible matches how often they cooccured
     for word in sentence.split(' '):
         if (word in single_ents or word in multi_ents) and word != ind and word not in x:
             word_ind = 0
@@ -259,18 +268,21 @@ def co_occurence_matching(ind, x, model, X, sentence, single_ents, multi_ents,ma
                     for sl in matched:
                         if m in sl:
                             for j in sl:
-                                j_ind=0
+                                j_ind = 0
                                 for i, w in enumerate(names):
                                     if w == j.lower():
                                         j_ind = i
                                 cooc_m += matrix[j_ind, word_ind]
                     matches[m] += cooc_m
+    # choose the one with the highest amount of cooccurence
     if len(set(matches.values())) == len(matches.values()):
         match = max(matches.items(), key=operator.itemgetter(1))[0]
     return match
 
 def sort_sentences_to_matched_entities(common_sentences, matched):
     # put sentences together based on matched entities
+    # keys will be a tuple containing names that belong to the same entity
+    # values will be all sentences where these names were tagged as entities
     sentences_matched = {}
     for sublist in matched:
         keys = ()
