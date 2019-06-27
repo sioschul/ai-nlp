@@ -33,13 +33,7 @@ fuzzy_sentences = em.fuzzy_entity_matching(amb, matched, sentences, entity_frequ
                                            single_word_ents, multi_word_ents, accuracy_gensim=0.4,
                                            accuracy_frequency=6, accuracy_lookaround=3)
 new_common_sentences = em.sort_sentences_to_matched_entities(fuzzy_sentences, matched)
-# replace different entity names in the sentences by the longest matched entity name
-'''for i,x in new_common_sentences.items():
-    longest_name= max(i,key=len)
-    for k, v in x.items():
-        for name in i:
-            if name != longest_name:
-                x[k] = v.replace(name, longest_name)'''
+
 # line we are currently
 current_line = 'Dumbledore came in, looking very somber.'
 current_entity = 'Dumbledore'
@@ -48,11 +42,3 @@ current_entity = 'Dumbledore'
 # @return: list of sentences that can be used for summary without spoilers
 summary_sentences, target_tuple = fn.get_sentences_for_summary(current_line, current_entity, new_common_sentences, sentences)
 mp.minie_processing(summary_sentences, target_tuple)
-'''with open('minie1.txt','w+', newline='') as f:
-    f.write("\n".join(summary_sentences))
-with open('minie1.txt','r+') as file:
-    with open('minie.txt','w+') as f:
-        lines = file.readlines()
-        for line in lines:
-            if line.strip() and len(line.strip())!=1:
-                f.write(line)'''
